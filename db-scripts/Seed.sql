@@ -1,4 +1,4 @@
--- UNTESTED
+-- TESTED 2017-08-06
 
 INSERT INTO tradie_users (user_email, user_phone) VALUES
 ('s3542360@student.rmit.edu.au', '1234123123'),

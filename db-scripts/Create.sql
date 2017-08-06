@@ -1,5 +1,5 @@
 -- https://mariadb.com/kb/en/mariadb/data-definition/
--- UNTESTED
+-- TESTED 2017-08-06
 
 DROP DATABASE IF EXISTS tradie_mm;
 CREATE DATABASE tradie_mm;
@@ -12,7 +12,7 @@ CREATE TABLE tradie_users (
 	user_email VARCHAR(50) NOT NULL,
 	user_phone VARCHAR(20),
 	PRIMARY KEY (user_id)
-)
+);
 
 CREATE TABLE tradie_requests (
 	request_id INT NOT NULL AUTO_INCREMENT,
@@ -24,12 +24,13 @@ CREATE TABLE tradie_requests (
 	FOREIGN KEY (user_id) REFERENCES tradie_users(user_id)
 		ON DELETE CASCADE
 		ON UPDATE RESTRICT
-)
+);
 
 CREATE TABLE tradie_services (
 	service_id INT NOT NULL AUTO_INCREMENT,
-	service_name VARCHAR(50)
-)
+	service_name VARCHAR(50),
+	PRIMARY KEY (service_id)
+);
 
 CREATE TABLE request_services (
 	id INT NOT NULL AUTO_INCREMENT,
@@ -38,4 +39,4 @@ CREATE TABLE request_services (
 	PRIMARY KEY (id),
 	FOREIGN KEY (request_id) REFERENCES tradie_requests(request_id),
 	FOREIGN KEY (service_id) REFERENCES tradie_services(service_id)
-)
+);
