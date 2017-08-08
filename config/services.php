@@ -34,5 +34,10 @@ return [
         'key'    => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
-
+	
+	'google' => [
+		'client_id' => '',
+		'client_secret' => '',
+		'redirect' => 'callbackurlhere',
+	],
 ];

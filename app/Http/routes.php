@@ -25,9 +25,7 @@
 
 Route::get('/', 'HomeController@index');
 
-Route::get('home/', 'HomeController@index');
-
-Route::get('home/about', 'HomeController@about');
+Route::get('about', 'HomeController@about');
 
 Route::get('user', 'UserController@index');
 
