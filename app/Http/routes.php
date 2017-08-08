@@ -11,10 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home.home');
-});
+// Route::get('', function () {
+    // return view('home.index');
+// });
 
-Route::get('about', function () {
-	return view('home.about');
-});
+// Route::get('about', function () {
+	// return view('home.about');
+// });
+
+// Route::get('user', function () {
+	// return view('user.index');
+// });
+
+Route::get('/', 'HomeController@index');
+
+Route::get('about', 'HomeController@about');
+
+Route::get('user', 'UserController@index');
