@@ -8,7 +8,7 @@
 
 @foreach ($users as $user)
     <br />
-    <p>User ID: {{ $user->user_id }}</p>
+    <a href="singleUser/{{ $user->user_id }}">User ID: {{ $user->user_id }}</a>
     <p>User Email: {{ $user->user_email }}</p>
     <p>User Phone: {{ $user->user_phone }}</p>
     <br />

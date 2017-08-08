@@ -16,4 +16,13 @@ class UserController extends Controller
 		
 		return view('user.index', ['users' => $users]);
 	}
+	
+	public function singleUser($id)
+	{
+		//$user = DB::select('select * from tradie_users where user_id='.$id);
+		// Adapted from https://laravel.com/docs/5.4/queries 
+		$user = DB::table('tradie_users')->where('user_id', $id)->first();
+		
+		return view('user.singleUser', ['user' => $user]);
+	}
 }
