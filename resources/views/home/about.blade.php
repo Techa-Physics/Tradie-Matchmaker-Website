@@ -6,4 +6,4 @@
 
 <h1>About</h1>
 
-@stop
+@endsection

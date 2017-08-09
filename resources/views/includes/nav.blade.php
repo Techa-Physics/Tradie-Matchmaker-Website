@@ -14,6 +14,13 @@
                 <li><a href="/about">About</a></li>
                 <li><a href="/user">Users</a></li>
             </ul>
-        </div>
+        
+		
+			<ul class="nav navbar-nav navbar-right">                                 
+				<li><a href="">Login</a></li>
+				<li><a href="">Register</a></li>
+				<li><a href="">Advertise</a></li>
+			</ul>
+		</div>
     </div>
 </nav>
