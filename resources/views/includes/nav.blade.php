@@ -19,7 +19,6 @@
 			<ul class="nav navbar-nav navbar-right">                                 
 				<li><a href="">Login</a></li>
 				<li><a href="">Register</a></li>
-				<li><a href="">Advertise</a></li>
 			</ul>
 		</div>
     </div>
