@@ -1,4 +1,4 @@
 <hr />
 <footer>
-    FOOTER Where's My Tradie 2017 FOOTER
+    2017 Where's My Tradie
 </footer>

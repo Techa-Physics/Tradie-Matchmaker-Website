@@ -11,22 +11,27 @@
 |
 */
 
-// Route::get('', function () {
-    // return view('home.index');
-// });
-
-// Route::get('about', function () {
-	// return view('home.about');
-// });
-
-// Route::get('user', function () {
-	// return view('user.index');
-// });
-
 Route::get('/', 'HomeController@index');
-
 Route::get('about', 'HomeController@about');
 
-Route::get('user', 'UserController@index');
+Route::get('profile', 'ProfileController@index');
 
-Route::get('singleUser/{id?}', 'UserController@singleUser');
+// Code below used from 
+// https://laravel.com/docs/5.1/authentication
+
+// Authentication routes
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Registration routes
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+// Password reset link request routes
+Route::get('password/email', 'Auth\PasswordController@getEmail');
+Route::post('password/email', 'Auth\PasswordController@postEmail');
+
+// Password reset routes
+route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
+route::post('password/reset', 'Auth\PasswordController@postReset');
