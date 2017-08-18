@@ -1,5 +1,8 @@
 <?php
 
+// Code adapted from
+// https://laravel.com/docs/5.1/testing
+
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -14,6 +17,6 @@ class ExampleTest extends TestCase
     public function testBasicExample()
     {
         $this->visit('/')
-             ->see('Laravel 5');
+             ->see('Where\'s My Tradie');
     }
 }
