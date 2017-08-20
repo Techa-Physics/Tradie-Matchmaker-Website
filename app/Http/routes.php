@@ -35,3 +35,6 @@ Route::post('password/email', 'Auth\PasswordController@postEmail');
 // Password reset routes
 route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 route::post('password/reset', 'Auth\PasswordController@postReset');
+
+// Advertisement routes
+Route::resource("advertisements", 'AdvertisementsController');
