@@ -16,6 +16,9 @@ Route::get('about', 'HomeController@about');
 
 Route::get('profile', 'ProfileController@index');
 
+// Advertisement routes
+Route::resource("advertisements", 'AdvertisementsController');
+
 // Code below used from 
 // https://laravel.com/docs/5.1/authentication
 
@@ -36,5 +39,3 @@ Route::post('password/email', 'Auth\PasswordController@postEmail');
 route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 route::post('password/reset', 'Auth\PasswordController@postReset');
 
-// Advertisement routes
-Route::resource("advertisements", 'AdvertisementsController');
