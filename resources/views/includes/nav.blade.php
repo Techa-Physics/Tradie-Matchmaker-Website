@@ -14,14 +14,14 @@
                 <li><a href="{{ url('/about') }}">About</a></li>
             </ul>
         
-		
+            <!-- RIGHT SIDE OF NAVBAR -->
 			<ul class="nav navbar-nav navbar-right">
             @if(Auth::check())
-                <li><a href="{{ url('/profile') }}">Your Profile</a></li>
-                <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+                <li><a href="{{ url('/profile') }}"><span class="glyphicon glyphicon-user"></span> Your Profile</a></li>
+                <li><a href="{{ url('/auth/logout') }}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
             @else
-				<li><a href="{{ url('/auth/login') }}">Login</a></li>
-				<li><a href="{{ url('/auth/register') }}">Register</a></li>
+				<li><a href="{{ url('/auth/login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				<li><a href="{{ url('/auth/register') }}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
             @endif
 			</ul>
 		</div>
