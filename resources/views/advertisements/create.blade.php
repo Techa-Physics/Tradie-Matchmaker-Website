@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.default')
 
-@section('content')
+@section('body')
 
 <h1>Create Advertisement</h1>
     {!! Form::open(['action' => 'AdvertisementController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}

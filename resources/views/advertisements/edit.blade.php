@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.default')
 
-@section('content')
+@section('body')
 
 <h1>Edit Advertisement</h1>
     {!! Form::open(['action' => ['AdvertisementController@update',$ad->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}

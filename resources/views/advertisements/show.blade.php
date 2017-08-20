@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.default')
 
-@section('content')
+@section('body')
 
     <h1>{{$ad->name}}</h1>   
     
