@@ -16,7 +16,7 @@ class AdvertisementsController extends Controller
      */
     public function index()
     {
-        //
+        return view('advertisements.index');
     }
 
     /**
