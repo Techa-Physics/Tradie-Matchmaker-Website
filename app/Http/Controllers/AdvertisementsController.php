@@ -22,7 +22,8 @@ class AdvertisementsController extends Controller
      */
     public function index()
     {
-        return view('advertisements.index');
+        $ads =  Advertisement::all();
+        return view('advertisements.index')->with('ads', $ads);
     }
 
     /**
@@ -75,7 +76,8 @@ class AdvertisementsController extends Controller
      */
     public function show($id)
     {
-        //
+        $ad =  Advertisement::find($id);
+        return view('advertisements.show')->with('ad', $ad);
     }
 
     /**
