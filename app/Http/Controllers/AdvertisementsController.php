@@ -57,10 +57,10 @@ class AdvertisementsController extends Controller
         $ad->name = $request->input('name');
         $ad->service = $request->input('service');
         $ad->body = $request->input('body');
-       // $ad->user = auth()->user()->id;
+        $ad->user = auth()->user()->id;
         $ad->location = $request->input('location');
         $ad->phone = $request->input('phone');
-       // $ad->email = auth()->user()->email;
+        $ad->email = auth()->user()->email;
         $ad->max_dist = $request->input('max_dist');
         $ad->save();
 
