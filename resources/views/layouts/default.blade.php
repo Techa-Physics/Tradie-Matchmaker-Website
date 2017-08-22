@@ -7,6 +7,7 @@
         @include('includes.nav')
         
         <div class="container body-content">
+            <!--@include('includes.message')-->
             @yield('body')
             
             <footer>

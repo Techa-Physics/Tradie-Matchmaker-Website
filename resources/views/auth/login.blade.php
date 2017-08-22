@@ -12,13 +12,23 @@
     {!! csrf_field() !!}
 
     <div>
-        Email
-        <input type="email" name="email" value="{{ old('email') }}">
+        <label for='email'>Email: </label>
+        <input type="email" class='form-control' name="email" value="{{ old('email') }}">
+        @if ($errors->has('email'))
+            <span class="help-block">
+                <strong>{{ $errors->first('email') }}</strong>
+            </span>
+        @endif
     </div>
 
     <div>
-        Password
-        <input type="password" name="password" id="password">
+        <label for='password'>Password: </label>
+        <input type="password" class='form-control' name="password" id="password">
+        @if ($errors->has('password'))
+            <span class="help-block">
+                <strong>{{ $errors->first('password') }}</strong>
+            </span>
+        @endif
     </div>
 
     <div>
@@ -26,7 +36,7 @@
     </div>
 
     <div>
-        <button type="submit">Login</button>
+        <button type="submit" class='btn btn-success'>Login</button>
     </div>
 </form>
 

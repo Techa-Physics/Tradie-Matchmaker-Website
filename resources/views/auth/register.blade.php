@@ -11,8 +11,8 @@
 
     <!-- Name -->
     <div>
-        Name
-        <input id='name' type="text" name="name" value="{{ old('name') }}" required autofocus>
+        <label for='name'>Name: </label> 
+        <input id='name' type="text" class='form-control' name="name" value="{{ old('name') }}" required autofocus>
         @if ($errors->has('name'))
             <span class="help-block">
                 <strong>{{ $errors->first('name') }}</strong>
@@ -22,8 +22,8 @@
 
     <!-- Email -->
     <div>
-        Email: 
-        <input id='email' type="email" name="email" value="{{ old('email') }}" required>
+        <label for='email'>Email: </label> 
+        <input id='email' type="email" class='form-control' name="email" value="{{ old('email') }}" required>
         @if ($errors->has('email'))
             <span class="help-block">
                 <strong>{{ $errors->first('email') }}</strong>
@@ -33,8 +33,8 @@
 
     <!-- Password -->
     <div>
-        Password: 
-        <input id='password' type="password" name="password" required>
+        <label for='password'>Password: </label>
+        <input id='password' type="password" class='form-control'name="password" required>
         @if ($errors->has('password'))
             <span class="help-block">
                 <strong>{{ $errors->first('password') }}</strong>
@@ -44,14 +44,14 @@
 
     <!-- Confirm Password -->
     <div>
-        Confirm Password: 
-        <input type="password" name="password_confirmation" required>
+        <label for='password_confirmation'>Confirm Password: </label>
+        <input type="password" class='form-control' name="password_confirmation" required>
     </div>
     <!-- Account type -->
     <div>
-        Account Type: 
-        <input type="radio" name='role' value='Personal' >Personal
-        <input type="radio" name='role' value='Business' >Business
+        <label for='role'>Account Type: </label>
+        <input type="radio" name='role' value='Personal' > Personal </input>
+        <input type="radio" name='role' value='Business' > Business </input>
         
         @if ($errors->has('role'))
             <span class="help-block">

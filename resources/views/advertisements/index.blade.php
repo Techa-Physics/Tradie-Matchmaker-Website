@@ -4,6 +4,6 @@
     $page_title="Ads";
 ?>
 
-<h1>ads</h1>
+<h1>Latest Advertisements</h1>
 
 @endsection

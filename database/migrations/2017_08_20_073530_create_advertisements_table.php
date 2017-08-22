@@ -18,11 +18,10 @@ class CreateAdvertisementsTable extends Migration
             $table->string('name');                 
             $table->string('service');            
             $table->mediumText('body');            
-            $table->integer('user_id')->unsigned()->references('id')->on('users');
+            //$table->integer('user_id')->unsigned();
             $table->string('location');             
             $table->string('phone');                
-            $table->string('email');               
-            $table->string('image');              
+           // $table->string('email');                            
             $table->string('max_dist');            
             $table->timestamps();
         });
