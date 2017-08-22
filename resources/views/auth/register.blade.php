@@ -50,12 +50,12 @@
     <!-- Account type -->
     <div>
         Account Type: 
-        <input type="radio" name='account_type' value='personal' >Personal
-        <input type="radio" name='account_type' value='business' >Business
+        <input type="radio" name='role' value='Personal' >Personal
+        <input type="radio" name='role' value='Business' >Business
         
-        @if ($errors->has('account_type'))
+        @if ($errors->has('role'))
             <span class="help-block">
-                <strong>{{ $errors->first('account_type') }}</strong>
+                <strong>{{ $errors->first('role') }}</strong>
             </span>
         @endif
         <div>
