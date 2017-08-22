@@ -5,9 +5,9 @@
 ?>
 
 <h1><center>Create Advertisement</center></h1>
-<form method="POST" action="">
+<form method="POST" action="/advertisements">
     {{ csrf_field() }}
-
+        
         <!-- Business Name -->
         <div class='form-group'>
             <label for='name'>Name: </label>
@@ -69,7 +69,7 @@
         <!-- Max Distance -->
         <div class='form-group'>
             <label for='max_dist'>Max Working Distance (km): </label>
-            <input id='max_dist' class='form-control' type="text" name="max-dist" placeholder="e.g. 25" required>
+            <input id='max_dist' class='form-control' type="text" name="max_dist" placeholder="e.g. 25" required>
             @if ($errors->has('max_dist'))
                 <span class="help-block">
                     <strong>{{ $errors->first('max_dist') }}</strong>
