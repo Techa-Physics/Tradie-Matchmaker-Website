@@ -17,6 +17,7 @@
                     <li><a href="{{ url('/advertisements/create') }}">Create Advertisement</a></li>  
             </ul>
         
+
             <!-- Right side of navagation bar -->
 			<ul class="nav navbar-nav navbar-right">
                 @if(Auth::guest())
@@ -26,6 +27,7 @@
                     <li><a href="{{ url('/profile') }}"><span class="glyphicon glyphicon-user"></span> {{Auth::user()->name}}</a></li>
                     <li><a href="{{ url('/auth/logout') }}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 @endif
+
 			</ul>
 		</div>
     </div>

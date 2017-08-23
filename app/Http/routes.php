@@ -17,6 +17,7 @@ Route::get('about', 'HomeController@about');
 Route::get('profile', 'ProfileController@index');
 
 // Advertisement routes
+
 Route::resource('advertisements','AdvertisementsController');
 
 

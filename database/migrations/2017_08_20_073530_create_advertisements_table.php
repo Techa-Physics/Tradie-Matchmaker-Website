@@ -14,6 +14,7 @@ class CreateAdvertisementsTable extends Migration
     public function up()
     {
         Schema::create('advertisements', function (Blueprint $table) {
+
             $table->increments('id');               
             $table->string('name');                 
             $table->string('service');            
@@ -23,6 +24,7 @@ class CreateAdvertisementsTable extends Migration
             $table->string('phone');                
             $table->string('email');                            
             $table->string('max_dist');            
+
             $table->timestamps();
         });
     }
@@ -34,6 +36,6 @@ class CreateAdvertisementsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('advertisements');
+        Schema::dropIfExists('advertisements');
     }
 }
