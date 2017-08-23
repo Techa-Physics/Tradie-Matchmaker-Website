@@ -6,9 +6,15 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Advertisement;
 
 class AdvertisementsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index']]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +22,9 @@ class AdvertisementsController extends Controller
      */
     public function index()
     {
-        return view('posts.index');
+
+        $ads =  Advertisement::all();
+        return view('advertisements.index')->with('ads', $ads);
     }
 
     /**
@@ -26,7 +34,7 @@ class AdvertisementsController extends Controller
      */
     public function create()
     {
-        //
+        return view('advertisements.create');
     }
 
     /**
@@ -37,7 +45,28 @@ class AdvertisementsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'service' => 'required',
+            'body' => 'required',
+            'location' => 'required',
+            'phone' => 'required',
+            'max_dist' => 'required',
+        ]);
+
+        //Create advertisement
+        $ad = new Advertisement;
+        $ad->name = $request->input('name');
+        $ad->service = $request->input('service');
+        $ad->body = $request->input('body');
+        $ad->user_id = auth()->user()->id;
+        $ad->location = $request->input('location');
+        $ad->phone = $request->input('phone');
+        $ad->email = auth()->user()->email;
+        $ad->max_dist = $request->input('max_dist');
+        $ad->save();
+
+        return redirect('/profile');
     }
 
     /**
@@ -48,7 +77,8 @@ class AdvertisementsController extends Controller
      */
     public function show($id)
     {
-        //
+        $ad =  Advertisement::find($id);
+        return view('advertisements.show')->with('ad', $ad);
     }
 
     /**

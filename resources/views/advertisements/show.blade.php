@@ -2,6 +2,10 @@
 
 @section('body')
 
+<?php
+    $page_title="{$ad->name}";
+?>
+
     <h1>{{$ad->name}}</h1>   
     
     <div>
@@ -13,15 +17,13 @@
         <label>Phone: {{$ad->phone}}</label></br>
         <label>Email: {{$ad->email}}</label></br>
         <label>Location: {{$ad->location}}</label></br>
-        <img style="width:50%" src="/storage/images/{{$ad->image}}">
+
 
     </div>
     <small>Created on {{$ad->created_at}}</small>
     <div>
-       <!-- @if(Auth::user()->account == '0') -->
-        <a href="/advertisement" class="btn btn-primary">Back</a>
-       <!-- @endif -->
-        <a href="/home" class="btn btn-success">Home</a>
+        <a href="/advertisements" class="btn btn-primary">Back</a>
+        <a href="/" class="btn btn-success">Home</a>
         
     </div>
 @endsection

@@ -14,16 +14,17 @@ class CreateAdvertisementsTable extends Migration
     public function up()
     {
         Schema::create('advertisements', function (Blueprint $table) {
-            $table->increments('id'); 
-            $table->string('name'); 
-            $table->string('service');
-            $table->mediumText('body');
-            $table->string('user');
-            $table->string('location');
-            $table->string('phone');
-            $table->string('email');
-            $table->string('image');
-            $table->string('max_dist');
+
+            $table->increments('id');               
+            $table->string('name');                 
+            $table->string('service');            
+            $table->mediumText('body');            
+            $table->integer('user_id')->unsigned();
+            $table->string('location');             
+            $table->string('phone');                
+            $table->string('email');                            
+            $table->string('max_dist');            
+
             $table->timestamps();
         });
     }
