@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Advertisement;
+use App\User;
 
 class AdvertisementsController extends Controller
 {
@@ -77,7 +78,9 @@ class AdvertisementsController extends Controller
     public function show($id)
     {
         $ad =  Advertisement::find($id);
-        return view('advertisements.show')->with('ad', $ad);
+        $user = User::find($ad->user_id);
+        //$name = $ad::getUserName($id);
+        return view('advertisements.show')->with('ad', $ad)->with('user',$user);
     }
 
     /**

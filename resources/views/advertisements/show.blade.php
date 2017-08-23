@@ -11,7 +11,7 @@
         <label>Description: {{$ad->body}}</label></br></br>
         
         <label>Contact Information:</label></br>
-        <label>{{ Auth::user()->name }} </label></br>
+        <label>{{ $user->name }} </label></br>
         <label>Phone: {{$ad->phone}}</label></br>
         <label>Email: {{$ad->email}}</label></br>
         <label>Location: {{$ad->location}}</label></br>
