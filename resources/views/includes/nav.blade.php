@@ -13,7 +13,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="{{ url('/about') }}">About</a></li>
                 <li><a href="/about">Find My Tradie</a></li>
-                <li><a href="{{ url('/advertisements') }}">Latest Advertisements</a></li>                
+                <li><a href="{{ url('/advertisements') }}">Latest Advertisements</a></li>                            
                     <li><a href="{{ url('/advertisements/create') }}">Create Advertisement</a></li>  
             </ul>
         
