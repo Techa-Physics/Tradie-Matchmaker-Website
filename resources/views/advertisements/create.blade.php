@@ -1,4 +1,6 @@
 @extends('layouts.default')
+
+
 @section('body')
 <?php
     $page_title="Create Advertisement";
@@ -21,6 +23,7 @@
 
         <!-- Service Type -->
         <div class='form-group'>
+
             <label for='service'>Service Type: </label>
             <input id='service' class='form-control' type="text" name="service" 
                     placeholder="e.g. Painting, fencing, electrical, ..." required>
@@ -84,5 +87,6 @@
         </div>
 
     </form>
+
 
 @endsection

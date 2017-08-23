@@ -22,6 +22,7 @@ class AdvertisementsController extends Controller
      */
     public function index()
     {
+
         $ads =  Advertisement::all();
         return view('advertisements.index')->with('ads', $ads);
     }
