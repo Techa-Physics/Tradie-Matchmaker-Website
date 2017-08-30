@@ -5,5 +5,7 @@
 ?>
 
 <h1>About</h1>
+{!! Form::open() !!}
 
+{!! Form::close() !!}
 @endsection

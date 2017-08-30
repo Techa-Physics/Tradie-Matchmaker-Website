@@ -7,86 +7,39 @@
 ?>
 
 <h1><center>Create Advertisement</center></h1>
-<form method="POST" action="/advertisements">
-    {{ csrf_field() }}
-        
-        <!-- Business Name -->
-        <div class='form-group'>
-            <label for='name'>Name: </label>
-            <input id='name' class='form-control' type="text" name="name" placeholder="e.g. Jim's Fencing" required autofocus>
-            @if ($errors->has('name'))
-                <span class="help-block">
-                    <strong>{{ $errors->first('name') }}</strong>
-                </span>
-            @endif
-        </div>
+{!! Form::open(['action' => 'AdvertisementsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
 
-        <!-- Service Type -->
-        <div class='form-group'>
+    <?php
+        //Business name
+        echo Form::label('name', 'Business Name');
+        echo Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Business Name']);
 
-            <label for='service'>Service Type: </label>
-            <input id='service' class='form-control' type="text" name="service" 
-                    placeholder="e.g. Painting, fencing, electrical, ..." required>
-            @if ($errors->has('service'))
-                <span class="help-block">
-                    <strong>{{ $errors->first('service') }}</strong>
-                </span>
-            @endif
-        </div>
+    // Service type
 
-        <!-- Business Description -->
-        <div class='form-group'>
-            <label for='body'>Business description: </label>
-            <input id='body' class='form-control' type="text" name="body" 
-                    placeholder="Short description of your business..." required>
-            @if ($errors->has('body'))
-                <span class="help-block">
-                    <strong>{{ $errors->first('body') }}</strong>
-                </span>
-            @endif
-        </div>
+        echo Form::label('service', 'Service Type');
+        echo Form::text('service', '', ['class' => 'form-control', 'placeholder' => 'eg. electrical, painting, gas, etc...']);
 
-        <!-- Location -->
-        <div class='form-group'>
-            <label for='location'>Locaiton: </label>
-            <input id='location' class='form-control' type="text" name="location"
-                     placeholder="e.g. Sunbury, 3429" required>
-                @if ($errors->has('location'))
-                <span class="help-block">
-                    <strong>{{ $errors->first('location') }}</strong>
-                </span>
-            @endif
-        </div>
+    // Description
+        echo Form::label('body', 'Short Description');
+        echo Form::textarea('body', '',  ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Description', 'size' => '15x1']);
 
-        <!-- Phone -->
-        <div class='form-group'>
-            <label for='phone'>Phone Number: </label>
-            <input id='phone' class='form-control' type="text" name="phone" placeholder="e.g. 0412345678" required>
-            @if ($errors->has('phone'))
-                <span class="help-block">
-                    <strong>{{ $errors->first('phone') }}</strong>
-                </span>
-            @endif
-        </div>
+    // Location
+        echo Form::label('location', 'Location');
+        echo Form::text('location', '', ['class' => 'form-control', 'placeholder' => 'eg. Sunbury, 3429']);
 
-        <!-- Max Distance -->
-        <div class='form-group'>
-            <label for='max_dist'>Max Working Distance (km): </label>
-            <input id='max_dist' class='form-control' type="text" name="max_dist" placeholder="e.g. 25" required>
-            @if ($errors->has('max_dist'))
-                <span class="help-block">
-                    <strong>{{ $errors->first('max_dist') }}</strong>
-                </span>
-            @endif
-        </div>
+    // Phone Number
+        echo Form::label('phone', 'Contact Number');
+        echo Form::text('phone', '', ['class' => 'form-control', 'placeholder' => 'eg. 0412345678']);
 
-        <!-- Submit Button -->
-        <div>
-            <button type="submit" class='btn btn-success'>Submit</button>
-            <button type="reset" class='btn btn-warning'>Reset</button>
-        </div>
+    // Max working distance
+        echo Form::label('max_dist', 'Maximum working distance (km)');
+        echo Form::text('max_dist', '', ['class' => 'form-control', 'placeholder' => 'eg. 25']);
+    ?>
+    </br>
+    <a href="/home" class="btn btn-danger">Cancel</a>
 
-    </form>
-
-
+    <?php
+        echo Form::submit('Submit', ['class'=>'btn btn-primary']);
+    ?>
+{!! Form::close() !!}
 @endsection

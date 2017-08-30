@@ -11,6 +11,7 @@
     @foreach($ads as $ad)
     <div class='well'>
         <h3><a href='/advertisements/{{$ad->id}}'>{{$ad->name}}</a></h3> 
+        <p>{{$ad->body}}</p>
         <samll>Created on {{$ad->created_at}}</small>
     </div>
     @endforeach
