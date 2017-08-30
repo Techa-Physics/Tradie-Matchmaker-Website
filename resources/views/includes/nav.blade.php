@@ -11,10 +11,20 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
+
                 <li><a href="{{ url('/about') }}">About</a></li>
-                <li><a href="/about">Find My Tradie</a></li>
-                <li><a href="{{ url('/advertisements') }}">Latest Advertisements</a></li>                            
-                    <li><a href="{{ url('/advertisements/create') }}">Create Advertisement</a></li>  
+                <li><a href="{{ url('/advertisements') }}">Latest Advertisements</a></li> 
+
+                @if(Auth::guest() || Auth::user()->hasRole("Personal") || Auth::user()->hasRole('Admin'))
+                    <li><a href="/about">Find My Tradie</a></li>                     
+                 @endif
+               
+                @if(Auth::user())
+                    @if(Auth::user()->hasRole("Business"))
+                        <li><a href="{{ url('/advertisements/create') }}">Create Advertisement</a></li>
+                    @endif  
+                @endif
+                
             </ul>
         
 

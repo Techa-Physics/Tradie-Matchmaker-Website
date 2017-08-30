@@ -23,7 +23,7 @@
     <small>Created on {{$ad->created_at}}</small>
     <div>
         <a href="/advertisements" class="btn btn-primary">Back</a>
-        <a href="/" class="btn btn-success">Home</a>
+        <a href="/profile" class="btn btn-success">Home</a>
         
     </div>
 @endsection

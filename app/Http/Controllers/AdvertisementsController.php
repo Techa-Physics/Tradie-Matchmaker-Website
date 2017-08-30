@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Advertisement;
 use App\User;
+use DB;
 
 class AdvertisementsController extends Controller
 {
@@ -23,8 +24,7 @@ class AdvertisementsController extends Controller
      */
     public function index()
     {
-
-        $ads =  Advertisement::all();
+         $ads =  Advertisement::orderBy('name','asc')->paginate(10);
         return view('advertisements.index')->with('ads', $ads);
     }
 
@@ -67,7 +67,7 @@ class AdvertisementsController extends Controller
         $ad->max_dist = $request->input('max_dist');
         $ad->save();
 
-        return redirect('/profile');
+        return redirect('/profile')->with('success', 'Advertisement Created');
     }
 
     /**
@@ -92,7 +92,8 @@ class AdvertisementsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $ad = Advertisement::find($id);
+        return view('advertisements.edit')->with('ad', $ad);
     }
 
     /**
@@ -104,7 +105,28 @@ class AdvertisementsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'service' => 'required',
+            'body' => 'required',
+            'location' => 'required',
+            'phone' => 'required',
+            'max_dist' => 'required',
+        ]);
+
+        //Create advertisement
+        $ad = Advertisement::find($id);
+        $ad->name = $request->input('name');
+        $ad->service = $request->input('service');
+        $ad->body = $request->input('body');
+        $ad->user_id = auth()->user()->id;
+        $ad->location = $request->input('location');
+        $ad->phone = $request->input('phone');
+        $ad->email = auth()->user()->email;
+        $ad->max_dist = $request->input('max_dist');
+        $ad->save();
+
+        return redirect('/profile')->with('success', 'Advertisement Updated');
     }
 
     /**

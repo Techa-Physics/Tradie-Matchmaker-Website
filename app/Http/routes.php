@@ -19,7 +19,14 @@ Route::get('profile', 'ProfileController@index');
 // Advertisement routes
 
 Route::resource('advertisements','AdvertisementsController');
-
+Route::group(['middleware'], function() {
+    Route::get('advertisements/create', [    
+        'uses' => 'AdvertisementsController@create',
+        'as' => 'advertisements.create',
+        'middleware' => 'roles',
+        'roles' => ['Business']
+    ]);
+});
 
 // Code below used from 
 // https://laravel.com/docs/5.1/authentication
