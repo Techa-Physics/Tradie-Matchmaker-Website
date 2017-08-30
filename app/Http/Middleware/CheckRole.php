@@ -27,10 +27,10 @@ class CheckRole
          {
              return $next($request);
          }
-         if($request->user()->hasRole($roles) || !$roles)
+         /*if($request->user()->hasRole($roles) || !$roles)
          {
              return $next($request);
-         }
-         return response("Insufficient permissions", 401);
+         }*/
+         return redirect('/profile')->with('error', 'Insufficient permissions to access the create advertisement page!');
      }
 }
