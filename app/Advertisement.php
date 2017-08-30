@@ -18,4 +18,9 @@ class Advertisement extends Model
         $name = DB::table('users')->where('id', $ad_user_id)->first()->name();
         return $name; 
     }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }
