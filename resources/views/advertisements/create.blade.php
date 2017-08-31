@@ -13,6 +13,7 @@
         //Business name
         echo Form::label('name', 'Business Name');
         echo Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Business Name']);
+
     ?></br>
 
     <?php
@@ -41,16 +42,19 @@
     ?></br>
 
     <?php
+
     // Max working distance
         echo Form::label('max_dist', 'Maximum working distance (km)');
         echo Form::text('max_dist', '', ['class' => 'form-control', 'placeholder' => 'eg. 25']);
     ?>
     </br>
+
     
     <?php
         echo Form::submit('Submit', ['class'=>'btn btn-success']);
     ?>
 
     <a href="/home" class="btn btn-danger">Cancel</a>
+
 {!! Form::close() !!}
 @endsection

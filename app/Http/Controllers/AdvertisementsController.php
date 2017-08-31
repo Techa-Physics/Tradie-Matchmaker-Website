@@ -146,6 +146,7 @@ class AdvertisementsController extends Controller
         $ad = Advertisement::find($id);
         $ad->delete();
 
-        return redirect('/profile')->with('success', 'Ad Removed');
+
+        return redirect('/profile')->with('success', 'Advertisement Deleted');
     }
 }

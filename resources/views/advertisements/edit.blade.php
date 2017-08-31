@@ -4,13 +4,14 @@
 <?php
     $page_title="Edit Advertisement";
 ?>
-<h1>Edit Advertisement</h1>
+<h1><center>Edit Advertisement</center></h1>
 
 {!! Form::open(['action' => ['AdvertisementsController@update', $ad->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
 
     <?php
         //Business name
         echo Form::label('name', 'Business Name');
+
         echo Form::text('name', $ad->name, ['class' => 'form-control', 'placeholder' => 'Business Name']);
     ?></br>
 
@@ -44,6 +45,7 @@
     // Max working distance
         echo Form::label('max_dist', 'Maximum working distance (km)');
         echo Form::text('max_dist', $ad->max_dist, ['class' => 'form-control', 'placeholder' => 'eg. 25']);
+
     ?>
     </br>
     <a href="/profile" class="btn btn-danger">Cancel</a>
