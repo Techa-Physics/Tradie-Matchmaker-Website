@@ -24,12 +24,20 @@
                             <tr>
                                 <th>Title</th>
                                 <th>Service</th>
+
+                                <th><center>Views</center></th>
+                                <th>Rating</th>
+
                                 <th></th>
                             </tr>
                             @foreach($ads as $ad)
                                 <tr>
                                     <td>{{ $ad->name }}</td>
                                     <td>{{ $ad->service }}</td>
+
+                                    <td><center>{{ $ad->views }}</center></td>
+                                    <td></td>
+
                                     <td>
                                         {!!Form::open(['action' => ['AdvertisementsController@destroy', $ad->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
                                         <a href='/advertisements/{{$ad->id}}' class='btn btn-success'>View</a>

@@ -11,28 +11,41 @@
     <?php
         //Business name
         echo Form::label('name', 'Business Name');
-        echo Form::text('name', $ad->name, ['class' => 'form-control']);
 
+        echo Form::text('name', $ad->name, ['class' => 'form-control', 'placeholder' => 'Business Name']);
+    ?></br>
+
+    <?php
     // Service type
+        $list = ['' => $service->category] + $categories;
+        echo Form::label('service', 'Service Type');?></br><?php
+        echo Form::select('service', $list, $service->category);
+        //echo Form::select('service', [0,1,2,3,4,5,6,7,8,9], 5);
+    ?></br></br>
 
-        echo Form::label('service', 'Service Type');
-        echo Form::text('service', $ad->service, ['class' => 'form-control']);
-
+    <?php
     // Description
         echo Form::label('body', 'Short Description');
-        echo Form::textarea('body', $ad->body,  ['id' => 'article-ckeditor', 'class' => 'form-control', 'size' => '15x1']);
+        echo Form::textarea('body', $ad->body,  ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Description', 'size' => '15x1']);
+    ?></br>
 
+    <?php
     // Location
         echo Form::label('location', 'Location');
-        echo Form::text('location', $ad->location, ['class' => 'form-control']);
+        echo Form::text('location', $ad->location, ['class' => 'form-control', 'placeholder' => 'eg. Sunbury, 3429']);
+    ?></br>
 
+    <?php
     // Phone Number
         echo Form::label('phone', 'Contact Number');
-        echo Form::text('phone', $ad->phone, ['class' => 'form-control']);
+        echo Form::text('phone', $ad->phone, ['class' => 'form-control', 'placeholder' => 'eg. 0412345678']);
+    ?></br>
 
+    <?php
     // Max working distance
         echo Form::label('max_dist', 'Maximum working distance (km)');
-        echo Form::text('max_dist', $ad->max_dist, ['class' => 'form-control']);
+        echo Form::text('max_dist', $ad->max_dist, ['class' => 'form-control', 'placeholder' => 'eg. 25']);
+
     ?>
     </br>
     <a href="/profile" class="btn btn-danger">Cancel</a>

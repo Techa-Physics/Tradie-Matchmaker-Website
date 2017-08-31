@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Advertisement;
+use App\Categories;
 use App\User;
 use DB;
 
@@ -35,7 +36,9 @@ class AdvertisementsController extends Controller
      */
     public function create()
     {
-        return view('advertisements.create');
+        
+        $categories = Categories::lists('category', 'category')->all();
+        return view('advertisements.create') ->with('categories',$categories);
     }
 
     /**
@@ -92,8 +95,11 @@ class AdvertisementsController extends Controller
      */
     public function edit($id)
     {
+        
+        $categories = Categories::lists('category','category')->all();
         $ad = Advertisement::find($id);
-        return view('advertisements.edit')->with('ad', $ad);
+        $service = Categories::where('category','=',$ad->service)->first();
+        return view('advertisements.edit')->with('ad', $ad)->with('categories', $categories)->with('service',$service);
     }
 
     /**
@@ -139,6 +145,7 @@ class AdvertisementsController extends Controller
     {
         $ad = Advertisement::find($id);
         $ad->delete();
+
 
         return redirect('/profile')->with('success', 'Advertisement Deleted');
     }
