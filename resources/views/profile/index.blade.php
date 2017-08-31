@@ -18,34 +18,43 @@
                     <div class="panel-body">
 
                     @if(Auth::user()->hasRole("Business"))
-                        <h3>Your advertisemensts</h3>
-                        <a href='{{ url('/advertisements/create') }}' class='btn btn-primary'>Create Ad</a>
-                    @else(Auth::user()->hasRole("Personal"))
-                        <h3>Your searches</h3>
-                        <a href='{{ url('/about') }}' class='btn btn-primary'>New search</a>
-                    @endif
-                    
-
-                    <table class='table table-striped'>
-                        <tr>
-                             @if(Auth::user()->hasRole("Business"))
-                                <th><h4>Ad Name</h4></th>
-                            @else(Auth::user()->hasRole("Personal"))
-                                <th><h4>Search Name</h4></th>
-                             @endif
-                            
-                            <th></th>
-                        </tr>
-                        @foreach($ads as $ad)
+                        <h3>Your advertisemensts</h3>                
+                        @if(count($ads) > 0)
+                        <table class='table table-striped'>
                             <tr>
-                                <td>{{ $ad->name }}</td>
-                                <td>
-                                    <a href='/advertisements/{{$ad->id}}' class='btn btn-success'>View</a>
-                                    <a href='/advertisements/{{$ad->id}}/edit' class='btn btn-warning'>Edit</a>
-                                </td>                                
+                                <th>Title</th>
+                                <th>Service</th>
+                                <th><center>Views</center></th>
+                                <th>Rating</th>
+                                <th></th>
                             </tr>
-                        @endforeach
-                    </table>                  
+                            @foreach($ads as $ad)
+                                <tr>
+                                    <td>{{ $ad->name }}</td>
+                                    <td>{{ $ad->service }}</td>
+                                    <td><center></center></td>
+                                    <td></td>
+                                    <td>
+                                        {!!Form::open(['action' => ['AdvertisementsController@destroy', $ad->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
+                                        <a href='/advertisements/{{$ad->id}}' class='btn btn-success'>View</a>
+                                        <a href='/advertisements/{{$ad->id}}/edit' class='btn btn-warning'>Edit</a>
+                                        <?php
+                                            echo Form::hidden('_method', 'DELETE');
+                                            echo Form::submit('Delete', ['class' => 'btn btn-danger']);
+                                        ?>
+                                        {!!Form::close()!!}
+                                        
+                                    </td>                                
+                                </tr>
+                            @endforeach
+                        </table>      
+                        @endif       
+                    @elseif(Auth::user()->hasRole("Personal"))
+                        <h3>Your searches</h3>
+
+                    @else
+                        <h3>Administration Dashboard</h3>
+                    @endif     
                 </div>
             </div>
         </div>
