@@ -32,7 +32,7 @@
                                 <tr>
                                     <td>{{ $ad->name }}</td>
                                     <td>{{ $ad->service }}</td>
-                                    <td><center></center></td>
+                                    <td><center>{{ $ad->views }}</center></td>
                                     <td></td>
                                     <td>
                                         {!!Form::open(['action' => ['AdvertisementsController@destroy', $ad->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
