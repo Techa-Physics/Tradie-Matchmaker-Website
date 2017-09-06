@@ -213,7 +213,7 @@ class CategoriesTableSeeder extends Seeder
         $catgeory->save();
 
         $catgeory = new Categories();
-        $catgeory->category = 'HEaters';
+        $catgeory->category = 'Heaters';
         $catgeory->save();
 
         $catgeory = new Categories();
