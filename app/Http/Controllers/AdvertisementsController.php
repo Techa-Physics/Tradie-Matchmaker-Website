@@ -52,6 +52,7 @@ class AdvertisementsController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'service' => 'required',
+            'quote' => 'required',
             'body' => 'required',
             'location' => 'required',
             'phone' => 'required',
@@ -62,6 +63,7 @@ class AdvertisementsController extends Controller
         $ad = new Advertisement;
         $ad->name = $request->input('name');
         $ad->service = $request->input('service');
+        $ad->quote = $request->input('quote');
         $ad->body = $request->input('body');
         $ad->user_id = auth()->user()->id;
         $ad->location = $request->input('location');
@@ -114,6 +116,7 @@ class AdvertisementsController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'service' => 'required',
+            'quote' => 'required',
             'body' => 'required',
             'location' => 'required',
             'phone' => 'required',
@@ -124,6 +127,7 @@ class AdvertisementsController extends Controller
         $ad = Advertisement::find($id);
         $ad->name = $request->input('name');
         $ad->service = $request->input('service');
+        $ad->quote = $request->input('quote');
         $ad->body = $request->input('body');
         $ad->user_id = auth()->user()->id;
         $ad->location = $request->input('location');

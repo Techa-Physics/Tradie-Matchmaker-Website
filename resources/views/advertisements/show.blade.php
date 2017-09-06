@@ -10,6 +10,12 @@
     
     <div>
         <label>Service type: {{$ad->service}}</label></br>
+        
+        @if($ad->quote == '0')
+            <label>Quote cost: FREE</label></br> 
+        @else
+            <label>Quote cost: {{$ad->quote}}</label></br>
+        @endif 
         <label>Description: {{$ad->body}}</label></br></br>
         
         <label>Contact Information:</label></br>

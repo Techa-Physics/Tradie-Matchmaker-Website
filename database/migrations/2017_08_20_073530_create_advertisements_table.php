@@ -17,7 +17,8 @@ class CreateAdvertisementsTable extends Migration
 
             $table->increments('id');               
             $table->string('name');                 
-            $table->string('service');            
+            $table->string('service');     
+            $table->integer('quote');       
             $table->mediumText('body');            
             $table->integer('user_id')->unsigned();
             $table->string('location');             
