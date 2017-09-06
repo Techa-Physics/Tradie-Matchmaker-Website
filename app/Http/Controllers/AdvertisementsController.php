@@ -36,7 +36,7 @@ class AdvertisementsController extends Controller
      */
     public function create()
     {
-        
+
         $categories = Categories::lists('category', 'category')->all();
         return view('advertisements.create') ->with('categories',$categories);
     }
@@ -84,8 +84,7 @@ class AdvertisementsController extends Controller
     public function show($id)
     {
         $ad =  Advertisement::find($id);
-        $user = User::find($ad->user_id);
-        //$name = $ad::getUserName($id);
+        $user = User::find($ad->user_id);  
         return view('advertisements.show')->with('ad', $ad)->with('user',$user);
     }
 
