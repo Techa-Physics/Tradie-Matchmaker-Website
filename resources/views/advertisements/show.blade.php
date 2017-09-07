@@ -32,11 +32,14 @@
     <small>Created on {{$ad->created_at}}</small></br></br>
 
     <div>
-        
-        <a href="/profile" class="btn btn-success">Home</a>
         @if(Auth::user())
             @if(Auth::user()->hasRole("Personal"))
                 <a href="/advertisements" class="btn btn-primary">Back</a>
+            @endif
+        @endif
+        <a href="/profile" class="btn btn-success">Home</a>
+        @if(Auth::user())
+            @if(Auth::user()->hasRole("Personal"))
                 <a href='/reviews/{{$ad->id}}/create' class='btn btn-warning'>Write Review</a>
             @endif
         @endif
