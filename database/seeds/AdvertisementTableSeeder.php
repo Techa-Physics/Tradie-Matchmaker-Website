@@ -13,9 +13,9 @@ class AdvertisementTableSeeder extends Seeder
      */
     public function run()
     {
-
+        // 1
         $ad = new Advertisement();
-        $ad->name = 'Arthurs Air Conditioning';
+        $ad->name = "Arthur's Air Conditioning";
         $ad->service = "Air Conditioning";
         $ad->quote = 50;
         $ad->body = "We provide the best air to your house.";
@@ -25,7 +25,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Arthur Curry')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 2
         $ad = new Advertisement();
         $ad->name = 'Waynes Industries';
         $ad->service = "Electricians";
@@ -37,7 +37,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Bruce Wayne')->value('email');
         $ad->max_dist = "25";
         $ad->save();
-
+        // 3
         $ad = new Advertisement();
         $ad->name = "Cain's Drains";
         $ad->service = "Drains";
@@ -49,19 +49,19 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Cassandra Cain')->value('email');
         $ad->max_dist = "25";
         $ad->save();
-
+        // 4
         $ad = new Advertisement();
         $ad->name = "Lance's Fences";
         $ad->service = "Fencing";
-        $ad->quote = 0;
-        $ad->body = "Give us a call between 12pm and 3pm for a free quoat";
+        $ad->quote = 50;
+        $ad->body = "Give us a call between 12pm and 3pm for a free quote";
         $ad->user_id = User::where('name', 'Dinah Lance')->value('id');
         $ad->location = "Sunbury, 3429";
         $ad->phone = "0400000004";
         $ad->email = User::where('name', 'Dinah Lance')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 5
         $ad = new Advertisement();
         $ad->name = "Thrawne's Fencing";
         $ad->service = "Fencing";
@@ -73,7 +73,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Eobard Thrawne')->value('email');
         $ad->max_dist = "20";
         $ad->save();
-
+        // 6
         $ad = new Advertisement();
         $ad->name = "Smoke's Fireplaces";
         $ad->service = "Fireplaces";
@@ -85,7 +85,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Felicity Smoke')->value('email');
         $ad->max_dist = "40";
         $ad->save();
-
+        // 7
         $ad = new Advertisement();
         $ad->name = "Guy Gardner's Gardens";
         $ad->service = "Gardeners";
@@ -97,7 +97,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Guy Gardner')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 8
         $ad = new Advertisement();
         $ad->name = "Hal's Carpentry";
         $ad->service = "Decking";
@@ -109,7 +109,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Hal Jordan')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 9
         $ad = new Advertisement();
         $ad->name = "Hal's Carpentry";
         $ad->service = "Carpenters";
@@ -121,7 +121,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Hal Jordan')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 10
         $ad = new Advertisement();
         $ad->name = "Hal's Carpentry";
         $ad->service = "Gazebo";
@@ -133,7 +133,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Hal Jordan')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 11
         $ad = new Advertisement();
         $ad->name = "Hal's Carpentry";
         $ad->service = "Patios";
@@ -145,7 +145,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Hal Jordan')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 12
         $ad = new Advertisement();
         $ad->name = "Hal's Carpentry";
         $ad->service = "Pergolas";
@@ -157,7 +157,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Hal Jordan')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 13
         $ad = new Advertisement();
         $ad->name = "West Concreting";
         $ad->service = "Paving";
@@ -169,7 +169,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Iris West')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 14
         $ad = new Advertisement();
         $ad->name = "West Concreting";
         $ad->service = "Concreting";
@@ -181,7 +181,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Iris West')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 15
         $ad = new Advertisement();
         $ad->name = "West Concreting";
         $ad->service = "Rendering";
@@ -193,7 +193,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Iris West')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 16
         $ad = new Advertisement();
         $ad->name = "Todd's Concreting";
         $ad->service = "Concreting";
@@ -205,7 +205,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Jason Todd')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 17
         $ad = new Advertisement();
         $ad->name = "Rayner's wiring";
         $ad->service = "Electricians";
@@ -217,7 +217,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Kyle Rayner')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 18
         $ad = new Advertisement();
         $ad->name = "LEX Corp";
         $ad->service = "Electricians";
@@ -229,7 +229,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 19
         $ad = new Advertisement();
         $ad->name = "LEX Corp";
         $ad->service = "Gardeners";
@@ -241,7 +241,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 20
         $ad = new Advertisement();
         $ad->name = "LEX Corp";
         $ad->service = "Plumbing";
@@ -253,7 +253,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 21
         $ad = new Advertisement();
         $ad->name = "LEX Corp";
         $ad->service = "Fencing";
@@ -265,7 +265,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 22
         $ad = new Advertisement();
         $ad->name = "LEX Corp";
         $ad->service = "Drains";
@@ -277,7 +277,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 23
         $ad = new Advertisement();
         $ad->name = "LEX Corp";
         $ad->service = "Concreting";
@@ -289,7 +289,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 24
         $ad = new Advertisement();
         $ad->name = "LEX Corp";
         $ad->service = "Carpenters";
@@ -301,7 +301,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 25
         $ad = new Advertisement();
         $ad->name = "LEX Corp";
         $ad->service = "Builders";
@@ -313,7 +313,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 26
         $ad = new Advertisement();
         $ad->name = "LEX Corp";
         $ad->service = "Bricklayers";
@@ -325,7 +325,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 27
         $ad = new Advertisement();
         $ad->name = "LEX Corp";
         $ad->service = "Windows";
@@ -337,7 +337,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 28
         $ad = new Advertisement();
         $ad->name = "LEX Corp";
         $ad->service = "Heating";
@@ -349,7 +349,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 29
         $ad = new Advertisement();
         $ad->name = "LEX Corp";
         $ad->service = "Roofing";
@@ -361,7 +361,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 30
         $ad = new Advertisement();
         $ad->name = "Merlyn Global Group";
         $ad->service = "Architects";
@@ -373,7 +373,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Malcolm Merlyn')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 31
         $ad = new Advertisement();
         $ad->name = "Merlyn Global Group";
         $ad->service = "Builders";
@@ -385,7 +385,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Malcolm Merlyn')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 32
         $ad = new Advertisement();
         $ad->name = "Merlyn Global Group";
         $ad->service = "Demolition";
@@ -397,7 +397,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Malcolm Merlyn')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 33
         $ad = new Advertisement();
         $ad->name = "Merlyn Global Group";
         $ad->service = "Excavation";
@@ -409,7 +409,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Malcolm Merlyn')->value('email');
         $ad->max_dist = "30";
         $ad->save();
-
+        // 34
         $ad = new Advertisement();
         $ad->name = "Fury Heating";
         $ad->service = "Heaters";
@@ -421,7 +421,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Nick Fury')->value('email');
         $ad->max_dist = "35";
         $ad->save();
-
+        // 35
         $ad = new Advertisement();
         $ad->name = "Fury Heating";
         $ad->service = "Heating Systems";
@@ -433,7 +433,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Nick Fury')->value('email');
         $ad->max_dist = "35";
         $ad->save();
-
+        // 36
         $ad = new Advertisement();
         $ad->name = "Fury Heating";
         $ad->service = "Underfloor Heating Systems";
@@ -445,7 +445,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Nick Fury')->value('email');
         $ad->max_dist = "35";
         $ad->save();
-
+        // 37
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Architects";
@@ -457,7 +457,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 38
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Bricklayers";
@@ -469,7 +469,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 39
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Builders";
@@ -481,7 +481,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 40
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Carpenters";
@@ -493,7 +493,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 41
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Carpet Layers";
@@ -505,7 +505,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 42
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Carports";
@@ -517,7 +517,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 43
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Concreting";
@@ -529,7 +529,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 44
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Decking";
@@ -541,7 +541,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 45
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Doors";
@@ -553,7 +553,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 46
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Drains";
@@ -565,7 +565,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 47
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Electricians";
@@ -577,7 +577,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 48
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Excavation";
@@ -589,7 +589,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 49
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Fencing";
@@ -601,7 +601,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 50 
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Garages";
@@ -613,7 +613,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 51
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Gas Fitters";
@@ -625,7 +625,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 52
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Home Security";
@@ -637,7 +637,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 53
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Insulation";
@@ -649,7 +649,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 54
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Kitchens";
@@ -661,7 +661,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 55
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Landscapers";
@@ -673,7 +673,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 56
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Lawn Mowing";
@@ -685,7 +685,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 57
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Lighting";
@@ -697,7 +697,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 58
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Locksmith";
@@ -709,7 +709,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 59
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Painters";
@@ -721,7 +721,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 60
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Pavers";
@@ -733,7 +733,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 61
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Plastering";
@@ -745,7 +745,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 62
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Plumbing";
@@ -757,7 +757,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 63
         $ad = new Advertisement();
         $ad->name = "Queen Industries";
         $ad->service = "Roofing";
@@ -769,7 +769,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 64
         $ad = new Advertisement();
         $ad->name = "Parker Gardens";
         $ad->service = "Lanscapers";
@@ -781,7 +781,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Peter Parker')->value('email');
         $ad->max_dist = "40";
         $ad->save();
-
+        // 65
         $ad = new Advertisement();
         $ad->name = "Parker Gardens";
         $ad->service = "Gardeners";
@@ -793,7 +793,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Peter Parker')->value('email');
         $ad->max_dist = "40";
         $ad->save();
-
+        // 66
         $ad = new Advertisement();
         $ad->name = "Parker Gardens";
         $ad->service = "Architects";
@@ -805,7 +805,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Peter Parker')->value('email');
         $ad->max_dist = "40";
         $ad->save();
-
+        // 67
         $ad = new Advertisement();
         $ad->name = "Parker Gardens";
         $ad->service = "Lawn & Turf";
@@ -817,7 +817,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Peter Parker')->value('email');
         $ad->max_dist = "40";
         $ad->save();
-
+        // 68
         $ad = new Advertisement();
         $ad->name = "Parker Gardens";
         $ad->service = "Lawn Mowing";
@@ -829,7 +829,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Peter Parker')->value('email');
         $ad->max_dist = "40";
         $ad->save();
-
+        // 69   
         $ad = new Advertisement();
         $ad->name = "Lance Custom Furniture";
         $ad->service = "Custom Furniture";
@@ -841,7 +841,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Qunintin Lance')->value('email');
         $ad->max_dist = "60";
         $ad->save();
-
+        // 70
         $ad = new Advertisement();
         $ad->name = "Palmer Technologies";
         $ad->service = "Air Conditioning";
@@ -853,7 +853,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 71   
         $ad = new Advertisement();
         $ad->name = "Palmer Technologies";
         $ad->service = "Antenna Services";
@@ -865,7 +865,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 72
         $ad = new Advertisement();
         $ad->name = "Palmer Technologies";
         $ad->service = "Appliance Installation";
@@ -877,7 +877,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 73
         $ad = new Advertisement();
         $ad->name = "Palmer Technologies";
         $ad->service = "Appliance Repairs";
@@ -889,7 +889,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 74
         $ad = new Advertisement();
         $ad->name = "Palmer Technologies";
         $ad->service = "Electricians";
@@ -901,7 +901,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 75
         $ad = new Advertisement();
         $ad->name = "Palmer Technologies";
         $ad->service = "Heaters";
@@ -913,7 +913,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 76
         $ad = new Advertisement();
         $ad->name = "Palmer Technologies";
         $ad->service = "Home Security";
@@ -925,7 +925,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 77
         $ad = new Advertisement();
         $ad->name = "Palmer Technologies";
         $ad->service = "Home Theater";
@@ -937,7 +937,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 78
         $ad = new Advertisement();
         $ad->name = "Palmer Technologies";
         $ad->service = "Hot Water System";
@@ -949,7 +949,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 79
         $ad = new Advertisement();
         $ad->name = "Palmer Technologies";
         $ad->service = "Lighting";
@@ -961,7 +961,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 80
         $ad = new Advertisement();
         $ad->name = "Palmer Technologies";
         $ad->service = "Solar Panels";
@@ -973,7 +973,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
         $ad->max_dist = "50";
         $ad->save();
-
+        // 81
         $ad = new Advertisement();
         $ad->name = "Kyle's Cleaning Services";
         $ad->service = "Window Cleaning";
@@ -985,7 +985,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Selina Kyle')->value('email');
         $ad->max_dist = "25";
         $ad->save();
-
+        // 82
         $ad = new Advertisement();
         $ad->name = "Kyle's Cleaning Services";
         $ad->service = "Rubish Removal";
@@ -997,7 +997,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Selina Kyle')->value('email');
         $ad->max_dist = "25";
         $ad->save();
-
+        // 83
         $ad = new Advertisement();
         $ad->name = "Kyle's Cleaning Services";
         $ad->service = "Skips";
@@ -1009,7 +1009,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Selina Kyle')->value('email');
         $ad->max_dist = "25";
         $ad->save();
-
+        // 84
         $ad = new Advertisement();
         $ad->name = "Kyle's Cleaning Services";
         $ad->service = "House Cleaning";
@@ -1021,7 +1021,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Selina Kyle')->value('email');
         $ad->max_dist = "25";
         $ad->save();
-
+        // 85
         $ad = new Advertisement();
         $ad->name = "Kyle's Cleaning Services";
         $ad->service = "Commercial Cleaning";
@@ -1033,7 +1033,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Selina Kyle')->value('email');
         $ad->max_dist = "25";
         $ad->save();
-
+        // 86
         $ad = new Advertisement();
         $ad->name = "Kyle's Cleaning Services";
         $ad->service = "Carpet Cleaning";
@@ -1045,7 +1045,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Selina Kyle')->value('email');
         $ad->max_dist = "25";
         $ad->save();
-
+        // 87
         $ad = new Advertisement();
         $ad->name = "Thor's electrical service";
         $ad->service = "Antenna Services";
@@ -1057,7 +1057,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Thor Odinson')->value('email');
         $ad->max_dist = "40";
         $ad->save();
-
+        // 88
         $ad = new Advertisement();
         $ad->name = "Thor's electrical service";
         $ad->service = "Electricians";
@@ -1069,7 +1069,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Thor Odinson')->value('email');
         $ad->max_dist = "40";
         $ad->save();
-
+        // 89
         $ad = new Advertisement();
         $ad->name = "Thor's electrical service";
         $ad->service = "Air Conditioning";
@@ -1081,7 +1081,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Thor Odinson')->value('email');
         $ad->max_dist = "40";
         $ad->save();
-
+        // 90
         $ad = new Advertisement();
         $ad->name = "Thor's electrical service";
         $ad->service = "Lighting";
@@ -1093,7 +1093,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Thor Odinson')->value('email');
         $ad->max_dist = "40";
         $ad->save();
-
+        // 91
         $ad = new Advertisement();
         $ad->name = "Savage Removalists";
         $ad->service = "Skips";
@@ -1105,7 +1105,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Vandal Savage')->value('email');
         $ad->max_dist = "40";
         $ad->save();
-
+        // 92
         $ad = new Advertisement();
         $ad->name = "Savage Removalists";
         $ad->service = "Removalists";
@@ -1117,7 +1117,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Vandal Savage')->value('email');
         $ad->max_dist = "40";
         $ad->save();
-
+        // 93
         $ad = new Advertisement();
         $ad->name = "Savage Removalists";
         $ad->service = "Rubish Removal";
@@ -1129,7 +1129,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Vandal Savage')->value('email');
         $ad->max_dist = "40";
         $ad->save();
-
+        // 94
         $ad = new Advertisement();
         $ad->name = "West Plumbers";
         $ad->service = "Plumbers";
@@ -1141,7 +1141,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Wally West')->value('email');
         $ad->max_dist = "40";
         $ad->save();
-
+        // 95
         $ad = new Advertisement();
         $ad->name = "Zantanna's Security";
         $ad->service = "Locksmith";
@@ -1153,7 +1153,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Zantanna Zatara')->value('email');
         $ad->max_dist = "40";
         $ad->save();
-
+        // 96
         $ad = new Advertisement();
         $ad->name = "Zantanna's Security";
         $ad->service = "Security Screen Doors";
@@ -1165,7 +1165,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Zantanna Zatara')->value('email');
         $ad->max_dist = "40";
         $ad->save();
-        
+        // 97
         $ad = new Advertisement();
         $ad->name = "Zantanna's Security";
         $ad->service = "Home Security";
