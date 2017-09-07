@@ -17,15 +17,29 @@ Route::get('about', 'HomeController@about');
 Route::get('profile', 'ProfileController@index');
 
 // Advertisement routes
+Route::resource('reviews','ReviewsController');
 
 Route::resource('advertisements','AdvertisementsController');
+
 Route::group(['middleware'], function() {
+
     Route::get('advertisements/create', [    
         'uses' => 'AdvertisementsController@create',
         'as' => 'advertisements.create',
         'middleware' => 'roles',
         'roles' => ['Business']
     ]);
+
+    Route::get('reviews/{reviews}/create', [
+        'uses' => 'ReviewsController@create',
+        'as' => 'reviews.create'
+    ]);
+
+    Route::post('reviews/{reviews}', [
+        'uses' => 'ReviewsController@store',
+        'as' => 'reviews.store'
+    ]);
+
 });
 
 // Code below used from 

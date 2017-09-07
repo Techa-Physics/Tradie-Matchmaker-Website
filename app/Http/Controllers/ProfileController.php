@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use App\Advertisement;
+use App\Review;
 
 class ProfileController extends Controller
 {
@@ -14,10 +15,11 @@ class ProfileController extends Controller
     }
 
     public function index()
-    {
-        //$user_id = auth()->user('id');
-        //$user = User::find($user_id);
+    {  
         $ads = Advertisement::where('user_id','=',auth()->user()->id)->get();
-        return view('profile.index')->with('ads', $ads);
+        //$ra = Advertisement::find($ads->id);
+        //$rating = DB::table('reviews')->where('ad_id',$ad->id)->avg('rating');
+
+        return view('profile.index')->with('ads', $ads);//->with('ra',$ra);
     }
 }

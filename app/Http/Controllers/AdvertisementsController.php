@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Advertisement;
 use App\Categories;
 use App\User;
+use App\Review;
 use DB;
 
 class AdvertisementsController extends Controller
@@ -83,9 +84,12 @@ class AdvertisementsController extends Controller
      */
     public function show($id)
     {
-        $ad =  Advertisement::find($id);
+        $ad =  Advertisement::find($id); 
         $user = User::find($ad->user_id);  
-        return view('advertisements.show')->with('ad', $ad)->with('user',$user);
+        $review = Review::where('ad_id','=',$ad->id)->get(); 
+        $rating = DB::table('reviews')->where('ad_id',$ad->id)->avg('rating');
+
+        return view('advertisements.show')->with('ad', $ad)->with('user',$user)->with('review',$review)->with('rating',$rating);
     }
 
     /**
