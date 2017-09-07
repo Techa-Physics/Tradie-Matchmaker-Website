@@ -117,14 +117,6 @@ class CategoriesTableSeeder extends Seeder
         $catgeory->save();
 
         $catgeory = new Categories();
-        $catgeory->category = 'Concrete Kerbs';
-        $catgeory->save();
-
-        $catgeory = new Categories();
-        $catgeory->category = 'Concrete Resurtacing';
-        $catgeory->save();
-
-        $catgeory = new Categories();
         $catgeory->category = 'Concreting';
         $catgeory->save();
 
@@ -249,10 +241,6 @@ class CategoriesTableSeeder extends Seeder
         $catgeory->save();
 
         $catgeory = new Categories();
-        $catgeory->category = 'Joiners';
-        $catgeory->save();
-
-        $catgeory = new Categories();
         $catgeory->category = 'Kitchens';
         $catgeory->save();
 
@@ -274,10 +262,6 @@ class CategoriesTableSeeder extends Seeder
 
         $catgeory = new Categories();
         $catgeory->category = 'Locksmith';
-        $catgeory->save();
-
-        $catgeory = new Categories();
-        $catgeory->category = 'Mirrors';
         $catgeory->save();
 
         $catgeory = new Categories();
@@ -321,10 +305,6 @@ class CategoriesTableSeeder extends Seeder
         $catgeory->save();
 
         $catgeory = new Categories();
-        $catgeory->category = 'Rain Water Tanks';
-        $catgeory->save();
-
-        $catgeory = new Categories();
         $catgeory->category = 'Removalists';
         $catgeory->save();
 
@@ -353,15 +333,7 @@ class CategoriesTableSeeder extends Seeder
         $catgeory->save();
 
         $catgeory = new Categories();
-        $catgeory->category = 'Scaffolding';
-        $catgeory->save();
-
-        $catgeory = new Categories();
         $catgeory->category = 'Security Screen Doors';
-        $catgeory->save();
-
-        $catgeory = new Categories();
-        $catgeory->category = 'Shade Sails';
         $catgeory->save();
        
         $catgeory = new Categories();
@@ -393,10 +365,6 @@ class CategoriesTableSeeder extends Seeder
         $catgeory->save();
 
         $catgeory = new Categories();
-        $catgeory->category = 'Spas';
-        $catgeory->save();
-
-        $catgeory = new Categories();
         $catgeory->category = 'Staircases';
         $catgeory->save();
 
@@ -410,10 +378,6 @@ class CategoriesTableSeeder extends Seeder
 
         $catgeory = new Categories();
         $catgeory->category = 'Tilers';
-        $catgeory->save();
-
-        $catgeory = new Categories();
-        $catgeory->category = 'Timber Flooring';
         $catgeory->save();
 
         $catgeory = new Categories();
