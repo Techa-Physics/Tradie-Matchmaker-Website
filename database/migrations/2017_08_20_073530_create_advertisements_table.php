@@ -17,14 +17,15 @@ class CreateAdvertisementsTable extends Migration
 
             $table->increments('id');               
             $table->string('name');                 
-            $table->string('service');            
+            $table->string('service');     
+            $table->integer('quote');       
             $table->mediumText('body');            
             $table->integer('user_id')->unsigned();
             $table->string('location');             
             $table->string('phone');                
             $table->string('email');                            
             $table->string('max_dist');   
-            $table->integer('views')->default(0);           
+            $table->integer('views')->default(0);             
 
             $table->timestamps();
         });

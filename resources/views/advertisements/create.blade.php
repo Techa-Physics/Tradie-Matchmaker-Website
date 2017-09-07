@@ -15,7 +15,7 @@
         echo Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Business Name']);
 
     ?></br>
-
+ 
     <?php
     // Service type 
         $list = ['' => 'Select category'] + $categories;
@@ -27,6 +27,12 @@
     // Description
         echo Form::label('body', 'Short Description');
         echo Form::textarea('body', '',  ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Description', 'size' => '15x1']);
+    ?></br>
+
+    <?php
+    // Quote
+        echo Form::label('quote', 'Quote price ($)');
+        echo Form::text('quote', '', ['class' => 'form-control', 'placeholder' => 'eg. 0, 50, 100, ...']);
     ?></br>
 
     <?php

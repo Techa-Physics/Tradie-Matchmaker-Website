@@ -25,7 +25,7 @@ class AdvertisementsController extends Controller
      */
     public function index()
     {
-         $ads =  Advertisement::orderBy('name','asc')->paginate(10);
+         $ads =  Advertisement::orderBy('service','asc')->paginate(10);
         return view('advertisements.index')->with('ads', $ads);
     }
 
@@ -36,7 +36,7 @@ class AdvertisementsController extends Controller
      */
     public function create()
     {
-        
+
         $categories = Categories::lists('category', 'category')->all();
         return view('advertisements.create') ->with('categories',$categories);
     }
@@ -52,6 +52,7 @@ class AdvertisementsController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'service' => 'required',
+            'quote' => 'required',
             'body' => 'required',
             'location' => 'required',
             'phone' => 'required',
@@ -62,6 +63,7 @@ class AdvertisementsController extends Controller
         $ad = new Advertisement;
         $ad->name = $request->input('name');
         $ad->service = $request->input('service');
+        $ad->quote = $request->input('quote');
         $ad->body = $request->input('body');
         $ad->user_id = auth()->user()->id;
         $ad->location = $request->input('location');
@@ -82,8 +84,7 @@ class AdvertisementsController extends Controller
     public function show($id)
     {
         $ad =  Advertisement::find($id);
-        $user = User::find($ad->user_id);
-        //$name = $ad::getUserName($id);
+        $user = User::find($ad->user_id);  
         return view('advertisements.show')->with('ad', $ad)->with('user',$user);
     }
 
@@ -114,6 +115,7 @@ class AdvertisementsController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'service' => 'required',
+            'quote' => 'required',
             'body' => 'required',
             'location' => 'required',
             'phone' => 'required',
@@ -124,6 +126,7 @@ class AdvertisementsController extends Controller
         $ad = Advertisement::find($id);
         $ad->name = $request->input('name');
         $ad->service = $request->input('service');
+        $ad->quote = $request->input('quote');
         $ad->body = $request->input('body');
         $ad->user_id = auth()->user()->id;
         $ad->location = $request->input('location');

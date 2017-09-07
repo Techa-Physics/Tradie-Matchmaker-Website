@@ -13,20 +13,19 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                    <div class="panel-body">
-
+                
                     @if(Auth::user()->hasRole("Business"))
-                        <h3>Your advertisemensts</h3>                
+                        <div class="panel-heading"><h3>Your advertisemensts</h3> </div>
+                        <div class="panel-body">
+                                       
                         @if(count($ads) > 0)
                         <table class='table table-striped'>
                             <tr>
-                                <th>Title</th>
+                                <th>Business</th>
                                 <th>Service</th>
 
                                 <th><center>Views</center></th>
-                                <th>Rating</th>
+                                <th><center>Rating</center></th>
 
                                 <th></th>
                             </tr>
@@ -36,7 +35,7 @@
                                     <td>{{ $ad->service }}</td>
 
                                     <td><center>{{ $ad->views }}</center></td>
-                                    <td></td>
+                                    <td><center>{{ 0/5 }}</center></td>
 
                                     <td>
                                         {!!Form::open(['action' => ['AdvertisementsController@destroy', $ad->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
@@ -54,10 +53,12 @@
                         </table>      
                         @endif       
                     @elseif(Auth::user()->hasRole("Personal"))
-                        <h3>Your searches</h3>
+                        <div class="panel-heading"><h3>Your searches</h3> </div>
+                        <div class="panel-body">
 
                     @else
-                        <h3>Administration Dashboard</h3>
+                        <div class="panel-heading"><h3>Admin</h3> </div>
+                        <div class="panel-body">
                     @endif     
                 </div>
             </div>

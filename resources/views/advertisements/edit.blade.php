@@ -30,6 +30,12 @@
     ?></br>
 
     <?php
+    // Quote
+        echo Form::label('quote', 'Quote price ($)');
+        echo Form::text('quote', $ad->quote, ['class' => 'form-control', 'placeholder' => 'example: 0, 50, 100, ...']);
+    ?></br>
+
+    <?php
     // Location
         echo Form::label('location', 'Location');
         echo Form::text('location', $ad->location, ['class' => 'form-control', 'placeholder' => 'eg. Sunbury, 3429']);
