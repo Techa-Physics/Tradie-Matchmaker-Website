@@ -11,7 +11,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2"> 
             <div class="panel panel-default">
                 
                     @if(Auth::user()->hasRole("Business"))
@@ -23,20 +23,12 @@
                             <tr>
                                 <th>Business</th>
                                 <th>Service</th>
-
-                                <th><center>Views</center></th>
-                                <th><center>Rating</center></th>
-
                                 <th></th>
                             </tr>
                             @foreach($ads as $ad)
                                 <tr>
                                     <td>{{ $ad->name }}</td>
                                     <td>{{ $ad->service }}</td>
-
-                                    <td><center>{{ $ad->views }}</center></td>
-                                    <td><center>{{ 0/5 }}</center></td>
-
                                     <td>
                                         {!!Form::open(['action' => ['AdvertisementsController@destroy', $ad->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
                                         <a href='/advertisements/{{$ad->id}}' class='btn btn-success'>View</a>
