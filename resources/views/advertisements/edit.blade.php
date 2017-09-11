@@ -11,7 +11,6 @@
     <?php
         //Business name
         echo Form::label('name', 'Business Name');
-
         echo Form::text('name', $ad->name, ['class' => 'form-control', 'placeholder' => 'Business Name']);
     ?></br>
 

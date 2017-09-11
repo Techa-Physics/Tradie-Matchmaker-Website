@@ -20,6 +20,7 @@ Route::get('profile', 'ProfileController@index');
 Route::resource('reviews','ReviewsController');
 
 Route::resource('advertisements','AdvertisementsController');
+Route::resource('searches','SearchesController');
 
 Route::group(['middleware'], function() {
 
@@ -38,6 +39,13 @@ Route::group(['middleware'], function() {
     Route::post('reviews/{reviews}', [
         'uses' => 'ReviewsController@store',
         'as' => 'reviews.store'
+    ]);
+
+    Route::get('searches/create', [    
+        'uses' => 'SearchesController@create',
+        'as' => 'searches.create',
+        'middleware' => 'roles',
+        'roles' => ['Personal']
     ]);
 
 });

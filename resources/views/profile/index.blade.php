@@ -48,6 +48,31 @@
                         <div class="panel-heading"><h3>Your searches</h3> </div>
                         <div class="panel-body">
 
+                        @if(count($searches) > 0)
+                        <table class='table table-striped'>
+                            <tr>
+                                <th>Your Search</th>
+                                <th>Location</th>
+                                <th></th>
+                            </tr>
+                            @foreach($searches as $search)
+                                <tr>
+                                    <td>{{ $search->service }}</td>
+                                    <td>{{ $search->location }}</td>
+                                    <td>
+                                        {!!Form::open(['action' => ['SearchesController@destroy', $search->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
+                                        <a href='/searches' class='btn btn-success'>Search</a>
+                                        <a href='/searches/{{$search->id}}/edit' class='btn btn-warning'>Edit</a>
+                                        <?php
+                                            echo Form::hidden('_method', 'DELETE');
+                                            echo Form::submit('Delete', ['class' => 'btn btn-danger']);
+                                        ?>
+                                        {!!Form::close()!!}
+                                    </td>                                
+                                </tr>
+                            @endforeach
+                        </table>
+                        @endif
                     @else
                         <div class="panel-heading"><h3>Admin</h3> </div>
                         <div class="panel-body">
