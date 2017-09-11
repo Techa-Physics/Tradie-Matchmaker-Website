@@ -17,7 +17,7 @@
 
                 @if(Auth::guest() || Auth::user()->hasRole("Personal") || Auth::user()->hasRole('Admin'))
                     <li><a href="{{ url('/advertisements') }}">Advertisements</a></li> 
-                    <li><a href="/searches/create">Find My Tradie</a></li>                     
+                    <li><a href="{{ url('/searches/create') }}">Find My Tradie</a></li>                     
                  @endif
                
                 @if(Auth::user())

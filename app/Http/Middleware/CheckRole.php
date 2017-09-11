@@ -17,7 +17,7 @@ class CheckRole
      {
          if ($request->user() === null) 
          {
-            return redirect('/home.index')->with('error', 'Insufficient permissions to access the create advertisement page!');
+            return redirect('/profile')->with('error', 'Insufficient permissions to access the create advertisement page!');
          }
 
          $actions = $request->route()->getAction();
