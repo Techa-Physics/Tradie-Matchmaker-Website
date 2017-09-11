@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use App\Advertisement;
 use App\Review;
+use App\Search;
 
 class ProfileController extends Controller
 {
@@ -17,9 +18,7 @@ class ProfileController extends Controller
     public function index()
     {  
         $ads = Advertisement::where('user_id','=',auth()->user()->id)->get();
-        //$ra = Advertisement::find($ads->id);
-        //$rating = DB::table('reviews')->where('ad_id',$ad->id)->avg('rating');
-
-        return view('profile.index')->with('ads', $ads);//->with('ra',$ra);
+        $searches = Search::where('user_id','=',auth()->user()->id)->get();
+        return view('profile.index')->with('ads', $ads)->with('searches',$searches);
     }
 }

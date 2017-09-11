@@ -70,4 +70,9 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->hasMany('App\Advertiement');
     }
+
+    public function searches()
+    {
+        return $this->hasMany('App\Search');
+    }
 }
