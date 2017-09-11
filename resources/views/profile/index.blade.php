@@ -15,7 +15,7 @@
             <div class="panel panel-default">
                 
                     @if(Auth::user()->hasRole("Business"))
-                        <div class="panel-heading"><h3>Your advertisemensts</h3> </div>
+                        <div class="panel-heading"><h3>Your advertisements</h3> </div>
                         <div class="panel-body">
                                        
                         @if(count($ads) > 0)
