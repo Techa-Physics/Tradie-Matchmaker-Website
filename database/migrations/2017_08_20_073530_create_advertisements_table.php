@@ -24,8 +24,7 @@ class CreateAdvertisementsTable extends Migration
             $table->string('location');             
             $table->string('phone');                
             $table->string('email');                            
-            $table->string('max_dist');   
-            $table->integer('views')->default(0);             
+            $table->string('max_dist');               
 
             $table->timestamps();
         });

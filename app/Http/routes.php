@@ -48,6 +48,10 @@ Route::group(['middleware'], function() {
         'roles' => ['Personal']
     ]);
 
+    Route::get('searches/{searches}',[
+        'uses' => 'SearchesController@index',
+        'as' => 'searches.index'
+    ]);
 });
 
 // Code below used from 

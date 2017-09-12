@@ -53,15 +53,21 @@
                             <tr>
                                 <th>Your Search</th>
                                 <th>Location</th>
+                                <th><center>Quote Range</center></th>
                                 <th></th>
                             </tr>
                             @foreach($searches as $search)
                                 <tr>
                                     <td>{{ $search->service }}</td>
                                     <td>{{ $search->location }}</td>
+                                    @if( $search->quote_min  ==  $search->quote_max )
+                                        <td><center>${{ $search->quote_min }}</center></td>
+                                    @else
+                                        <td><center>${{$search->quote_min}} - ${{$search->quote_max}}</center></td>
+                                    @endif
                                     <td>
                                         {!!Form::open(['action' => ['SearchesController@destroy', $search->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
-                                        <a href='/searches' class='btn btn-success'>Search</a>
+                                        <a href='/searches/{{ $search->id }}' class='btn btn-success'>Search</a>
                                         <a href='/searches/{{$search->id}}/edit' class='btn btn-warning'>Edit</a>
                                         <?php
                                             echo Form::hidden('_method', 'DELETE');
