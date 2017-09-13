@@ -149,7 +149,8 @@ return [
 		 * Socialite 2.0...
 		 */
         Laravel\Socialite\SocialiteServiceProvider::class,
-         Collective\Html\HtmlServiceProvider::class,
+        
+        Collective\Html\HtmlServiceProvider::class,
     ],
 
     /*
