@@ -41,12 +41,12 @@ Route::group(['middleware'], function() {
         'as' => 'reviews.store'
     ]);
 
-    Route::get('searches/create', [    
-        'uses' => 'SearchesController@create',
-        'as' => 'searches.create',
-        'middleware' => 'roles',
-        'roles' => ['Personal']
-    ]);
+    // Route::get('searches/create', [    
+    //     'uses' => 'SearchesController@create',
+    //     'as' => 'searches.create',
+    //     'middleware' => 'roles',
+    //     'roles' => ['Personal']
+    // ]);
 
     Route::get('searches/{searches}',[
         'uses' => 'SearchesController@index',

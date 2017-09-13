@@ -15,10 +15,10 @@
                 <li><a href="{{ url('/about') }}">About</a></li>
                 
 
-                @if(Auth::guest() || Auth::user()->hasRole("Personal") || Auth::user()->hasRole('Admin'))
+                <!-- @if(Auth::guest() || Auth::user()->hasRole("Personal") || Auth::user()->hasRole('Admin')) -->
                     <li><a href="{{ url('/advertisements') }}">Advertisements</a></li> 
-                    <li><a href="/searches/create">Find My Tradie</a></li>                     
-                 @endif
+                    <li><a href="{{ url('/searches/create') }}">Find My Tradie</a></li>                     
+                <!-- @endif -->
                
                 @if(Auth::user())
                     @if(Auth::user()->hasRole("Business"))
