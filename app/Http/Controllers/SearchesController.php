@@ -11,12 +11,25 @@ use App\Search;
 use App\Advertisement;
 use DB;
 
+// Illuminate\Support\Facades\...
+use Auth, Validator, Input;
+
 class SearchesController extends Controller
 {
+    private $searchRules;
 
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
+
+        // Only service type is required to search with
+        $this->searchRules = array(
+            'service' => 'required'//,
+            // 'location' => 'required_without_all:service,quote_min,quote_max,rating',
+            // 'quote_min' => 'required_without_all:service,location,quote_max,rating',
+            // 'quote_max' => 'required_without_all:service,location,quote_max,rating',
+            // 'rating' => 'required_without_all:service,location,quote_min,quote_max,rating',
+        );
     }
     /**
      * Display a listing of the resource.
@@ -44,16 +57,12 @@ class SearchesController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
+     *
+     * https://stackoverflow.com/questions/23401365/laravel-at-least-one-field-required-validation
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'service' => 'required',
-            'location' => 'required',
-            'quote_min' => 'required',
-            'quote_max' => 'required',
-            'rating' => 'required',
-        ]);
+        $this->validate($request, $this->searchRules);
 
         //Create search
         $search = new Search;
@@ -62,7 +71,8 @@ class SearchesController extends Controller
         $search->quote_min = $request->input('quote_min');
         $search->quote_max = $request->input('quote_max');
         $search->rating = $request->input('rating');
-        $search->user_id = auth()->user()->id;   
+        // Since searches are serverside, we will use id of 0 to store guest searches
+        $search->user_id = Auth::user() ? auth()->user()->id : 0;   
         $search->save();
 
         return redirect('/searches');
@@ -102,13 +112,7 @@ class SearchesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'service' => 'required',
-            'location' => 'required',
-            'quote_min' => 'required',
-            'quote_max' => 'required',
-            'rating' => 'required',
-        ]);
+        $this->validate($request, $this->searchRules);
 
         //Update search
         $search = Search::find($id);
@@ -117,7 +121,7 @@ class SearchesController extends Controller
         $search->quote_min = $request->input('quote_min');
         $search->quote_max = $request->input('quote_max');
         $search->rating = $request->input('rating');
-        $search->user_id = auth()->user()->id;   
+        $search->user_id = Auth::user() ? auth()->user()->id : 0;   
         $search->save();
 
         return redirect('/searches');
