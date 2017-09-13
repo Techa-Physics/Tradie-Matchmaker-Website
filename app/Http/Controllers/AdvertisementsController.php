@@ -86,10 +86,18 @@ class AdvertisementsController extends Controller
     {
         $ad =  Advertisement::find($id); 
         $user = User::find($ad->user_id);  
-        $review = Review::where('ad_id','=',$ad->id)->get(); 
-        $rating = DB::table('reviews')->where('ad_id',$ad->id)->avg('rating');
+        
+        $review = Review::where('ad_id','=',$ad->id)
+                    ->get(); 
 
-        return view('advertisements.show')->with('ad', $ad)->with('user',$user)->with('review',$review)->with('rating',$rating);
+        $rating = Review::where('ad_id',$ad->id)
+                    ->avg('rating');
+
+        return view('advertisements.show')
+                    ->with('ad', $ad)
+                    ->with('user',$user)
+                    ->with('review',$review)
+                    ->with('rating',$rating);
     }
 
     /**

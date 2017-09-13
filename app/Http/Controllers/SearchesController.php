@@ -10,6 +10,7 @@ use App\Categories;
 use App\Search;
 use App\Advertisement;
 use DB;
+use App\Review;
 
 // Illuminate\Support\Facades\...
 use Auth, Validator, Input;
@@ -36,9 +37,18 @@ class SearchesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('searches.index');
+    public function index($id)
+    { 
+        $search = Search::find($id);
+
+        $ads =  Advertisement::where('service', '=', $search->service) //service
+                    ->whereBetween('quote', [$search->quote_min, $search->quote_max])
+                    ->paginate(10);
+                    //->all();
+
+        return view('searches.index')
+                    ->with('ads', $ads)
+                    ->with('search', $search);
     }
 
     /**
@@ -48,8 +58,11 @@ class SearchesController extends Controller
      */
     public function create()
     {
+        $searches = Search::where('user_id','=',auth()->user()->id)->get();
         $categories = Advertisement::orderBy('service','asc')->lists('service','service')->all();
-        return view('searches.create')->with('categories',$categories);
+        return view('searches.create')
+                    ->with('categories',$categories)
+                    ->with('searches', $searches);
     }
 
     /**
@@ -75,7 +88,9 @@ class SearchesController extends Controller
         $search->user_id = Auth::user() ? auth()->user()->id : 0;   
         $search->save();
 
-        return redirect('/searches');
+        $last = Search::orderBy('created_at', 'desc')->first();
+        $id = $last->id;
+        return redirect("/searches/$id");
     }
 
     /**
@@ -124,7 +139,7 @@ class SearchesController extends Controller
         $search->user_id = Auth::user() ? auth()->user()->id : 0;   
         $search->save();
 
-        return redirect('/searches');
+        return redirect("/searches/$id");
     }
 
     /**
