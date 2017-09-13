@@ -20,13 +20,13 @@
     <?php
     // Quote min
         echo Form::label('quote_min', 'Minimum Quote Price ($)');
-        echo Form::text('quote_min', '', ['class' => 'form-control', 'placeholder' => 'eg. 0,10,20,...']);
+        echo Form::text('quote_min', $min->quote, ['class' => 'form-control', 'placeholder' => 'eg. 0,10,20,...']);
     ?></br>
 
     <?php
     // Quote max
         echo Form::label('quote_max', 'Maximum Quote Price ($)');
-        echo Form::text('quote_max', '', ['class' => 'form-control', 'placeholder' => 'eg. 80, 90, 100, ...']);
+        echo Form::text('quote_max', "$max->quote", ['class' => 'form-control', 'placeholder' => 'eg. 80, 90, 100, ...']);
     ?></br>
 
     <?php
