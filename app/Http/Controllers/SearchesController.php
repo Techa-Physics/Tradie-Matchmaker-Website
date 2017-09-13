@@ -45,11 +45,15 @@ class SearchesController extends Controller
      */
     public function create()
     {
+        $max = Advertisement::orderBy('quote', 'dsc')->first();
+        $min = Advertisement::orderBy('quote', 'asc')->first();
         $searches = Search::where('user_id','=',auth()->user()->id)->get();
         $categories = Advertisement::orderBy('service','asc')->lists('service','service')->all();
         return view('searches.create')
                     ->with('categories',$categories)
-                    ->with('searches', $searches);
+                    ->with('searches', $searches)
+                    ->with('max', $max)
+                    ->with('min', $min);
     }
 
     /**
@@ -62,10 +66,10 @@ class SearchesController extends Controller
     {
         $this->validate($request, [
             'service' => 'required',
-            'location' => 'required',
+           /* 'location' => 'required',
             'quote_min' => 'required',
             'quote_max' => 'required',
-            'rating' => 'required',
+            'rating' => 'required',*/
         ]);
 
         //Create search
@@ -119,10 +123,10 @@ class SearchesController extends Controller
     {
         $this->validate($request, [
             'service' => 'required',
-            'location' => 'required',
+            /*'location' => 'required',
             'quote_min' => 'required',
             'quote_max' => 'required',
-            'rating' => 'required',
+            'rating' => 'required',*/
         ]);
 
         //Update search
