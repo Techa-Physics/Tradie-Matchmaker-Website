@@ -1,2 +1,9 @@
-.navbar{background-color:#036!important}
-#navbarsub{background-color: ##808080!important}
+.navbar{background-color:#3B5998!important}
+.navbarsubclass ul{float:right;}
+.jumbotron.text-center{text-align:left;!important;background-color:#808080;}
+.btn.btn-primary.btn-lg{background-color:#003366;}
+.btn.btn-success.btn-lg{background-color:#003366;}
+.textathome{text-align:left;float:left;!important}
+.pictureathome{text-align:right; }
+.container.body-content{background-color:#808080}
+
