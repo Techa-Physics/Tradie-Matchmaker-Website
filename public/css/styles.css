@@ -2,8 +2,10 @@
 .navbarsubclass ul{float:right;}
 .jumbotron.text-center{text-align:left;!important;background-color:#808080;}
 .btn.btn-primary.btn-lg{background-color:#003366;}
-.btn.btn-success.btn-lg{background-color:#003366;}
-.textathome{text-align:left;float:left;!important}
+.btn.btn-success.btn-lg{background-color:#003366;text-decoration:none;}
+.textathome h1, p {color:#E5E5E5!important}
+.textathome{text-align:left;float:left!important}
 .pictureathome{text-align:right; }
 .container.body-content{background-color:#808080}
-
+h1 {color:#E5E5E5!important}
+.well p {color:black!important}
