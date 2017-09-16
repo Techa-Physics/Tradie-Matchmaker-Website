@@ -84,6 +84,18 @@ class SearchesController extends Controller
 
         $this->validate($request, $this->searchRules);
 
+        $town = $request->input('town');
+        $state = $request->input('state');
+        $postcode = $request->input('postcode');
+
+        $address = "$town $state $postcode, Australia"; 
+        $prepAddr = str_replace(' ','+',$address);
+        $geocode=file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
+        
+        $output= json_decode($geocode);
+        
+        $lat = $output->results[0]->geometry->location->lat;
+        $long = $output->results[0]->geometry->location->lng;
 
         //Create search
         $search = new Search;
@@ -96,6 +108,8 @@ class SearchesController extends Controller
         $search->rating = $request->input('rating');
         // Since searches are serverside, we will use id of 0 to store guest searches
         $search->user_id = Auth::user() ? auth()->user()->id : 0;   
+        $search->latitude = $lat;
+        $search->longitude = $long;
         $search->save();
 
         $last = Search::orderBy('created_at', 'desc')->first();
@@ -140,6 +154,18 @@ class SearchesController extends Controller
 
         $this->validate($request, $this->searchRules);
 
+        $town = $request->input('town');
+        $state = $request->input('state');
+        $postcode = $request->input('postcode');
+
+        $address = "$town $state $postcode, Australia"; 
+        $prepAddr = str_replace(' ','+',$address);
+        $geocode=file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
+        
+        $output= json_decode($geocode);
+        
+        $lat = $output->results[0]->geometry->location->lat;
+        $long = $output->results[0]->geometry->location->lng;
 
         //Update search
         $search = Search::find($id);
@@ -151,6 +177,8 @@ class SearchesController extends Controller
         $search->quote_max = $request->input('quote_max');
         $search->rating = $request->input('rating');
         $search->user_id = Auth::user() ? auth()->user()->id : 0;   
+        $search->latitude = $lat;
+        $search->longitude = $long;
         $search->save();
 
         return redirect("/searches/$id");

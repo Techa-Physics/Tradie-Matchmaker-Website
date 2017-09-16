@@ -26,7 +26,9 @@ class CreateAdvertisementsTable extends Migration
             $table->string('state');            
             $table->string('phone');                
             $table->string('email');                            
-            $table->integer('max_dist');               
+            $table->integer('max_dist');     
+            $table->string('latitude');
+            $table->string('longitude');          
 
             $table->timestamps();
         });

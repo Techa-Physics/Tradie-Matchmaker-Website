@@ -26,6 +26,8 @@ class AdvertisementTableSeeder extends Seeder
         $ad->phone = "0400000001";
         $ad->email = User::where('name', 'Arthur Curry')->value('email');
         $ad->max_dist = 30;
+        $ad->latitude = '-37.669142';
+        $ad->longitude = '144.543721';
         $ad->save();
         // 2
         $ad = new Advertisement();
@@ -40,6 +42,8 @@ class AdvertisementTableSeeder extends Seeder
         $ad->phone = "0400000002";
         $ad->email = User::where('name', 'Bruce Wayne')->value('email');
         $ad->max_dist = 25;
+        $ad->latitude = '-37.701944';
+        $ad->longitude = '144.79715';
         $ad->save();
         // 3
         $ad = new Advertisement();
@@ -54,6 +58,8 @@ class AdvertisementTableSeeder extends Seeder
         $ad->phone = "0400000003";
         $ad->email = User::where('name', 'Cassandra Cain')->value('email');
         $ad->max_dist = 25;
+        $ad->latitude = '-37.701944';
+        $ad->longitude = '144.79715';
         $ad->save();
         // 4
         $ad = new Advertisement();
@@ -68,6 +74,8 @@ class AdvertisementTableSeeder extends Seeder
         $ad->phone = "0400000004";
         $ad->email = User::where('name', 'Dinah Lance')->value('email');
         $ad->max_dist = 50;
+        $ad->latitude = '-37.5794919';
+        $ad->longitude = '144.7288981';
         $ad->save();
         // 5
         $ad = new Advertisement();
@@ -82,6 +90,8 @@ class AdvertisementTableSeeder extends Seeder
         $ad->phone = "0400000005";
         $ad->email = User::where('name', 'Eobard Thrawne')->value('email');
         $ad->max_dist = 20;
+        $ad->latitude = '-37.714286';
+        $ad->longitude = '145.007847';
         $ad->save();
         // 6
         $ad = new Advertisement();
@@ -96,6 +106,8 @@ class AdvertisementTableSeeder extends Seeder
         $ad->phone = "0400000006";
         $ad->email = User::where('name', 'Felicity Smoke')->value('email');
         $ad->max_dist = 40;
+        $ad->latitude = '--37.755337';
+        $ad->longitude = '144.917282';
         $ad->save();
         // 7
         $ad = new Advertisement();
@@ -110,6 +122,8 @@ class AdvertisementTableSeeder extends Seeder
         $ad->phone = "0400000007";
         $ad->email = User::where('name', 'Guy Gardner')->value('email');
         $ad->max_dist = 30;
+        $ad->latitude = '-37.730366';
+        $ad->longitude = '144.92868';
         $ad->save();
         // 8
         $ad = new Advertisement();
@@ -124,6 +138,8 @@ class AdvertisementTableSeeder extends Seeder
         $ad->phone = "0400000008";
         $ad->email = User::where('name', 'Hal Jordan')->value('email');
         $ad->max_dist = 30;
+        $ad->latitude = '-37.786461';
+        $ad->longitude = '144.83194';
         $ad->save();
         // 9
         $ad = new Advertisement();
@@ -137,7 +153,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000008";
         $ad->email = User::where('name', 'Hal Jordan')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.786461';
+        $ad->longitude = '144.83194';
         $ad->save();
         // 10
         $ad = new Advertisement();
@@ -151,7 +169,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000008";
         $ad->email = User::where('name', 'Hal Jordan')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.786461';
+        $ad->longitude = '144.83194';
         $ad->save();
         // 11
         $ad = new Advertisement();
@@ -165,7 +185,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000008";
         $ad->email = User::where('name', 'Hal Jordan')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.786461';
+        $ad->longitude = '144.83194';
         $ad->save();
         // 12
         $ad = new Advertisement();
@@ -179,7 +201,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000008";
         $ad->email = User::where('name', 'Hal Jordan')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.786461';
+        $ad->longitude = '144.83194';
         $ad->save();
         // 13
         $ad = new Advertisement();
@@ -193,7 +217,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000009";
         $ad->email = User::where('name', 'Iris West')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.736111';
+        $ad->longitude = '144.803889';
         $ad->save();
         // 14
         $ad = new Advertisement();
@@ -207,7 +233,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000009";
         $ad->email = User::where('name', 'Iris West')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.736111';
+        $ad->longitude = '144.803889';
         $ad->save();
         // 15
         $ad = new Advertisement();
@@ -221,7 +249,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000009";
         $ad->email = User::where('name', 'Iris West')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.736111';
+        $ad->longitude = '144.803889';
         $ad->save();
         // 16
         $ad = new Advertisement();
@@ -235,7 +265,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000010";
         $ad->email = User::where('name', 'Jason Todd')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.819464';
+        $ad->longitude = '145.153407';
         $ad->save();
         // 17
         $ad = new Advertisement();
@@ -249,7 +281,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000011";
         $ad->email = User::where('name', 'Kyle Rayner')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.860009';
+        $ad->longitude = '145.057356';
         $ad->save();
         // 18
         $ad = new Advertisement();
@@ -263,7 +297,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000012";
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.829';
+        $ad->longitude = '144.957';
         $ad->save();
         // 19
         $ad = new Advertisement();
@@ -277,7 +313,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000012";
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.829';
+        $ad->longitude = '144.957';
         $ad->save();
         // 20
         $ad = new Advertisement();
@@ -291,7 +329,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000012";
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.829';
+        $ad->longitude = '144.957';
         $ad->save();
         // 21
         $ad = new Advertisement();
@@ -305,7 +345,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000012";
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.829';
+        $ad->longitude = '144.957';
         $ad->save();
         // 22
         $ad = new Advertisement();
@@ -319,7 +361,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000012";
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.829';
+        $ad->longitude = '144.957';
         $ad->save();
         // 23
         $ad = new Advertisement();
@@ -333,7 +377,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000012";
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.829';
+        $ad->longitude = '144.957';
         $ad->save();
         // 24
         $ad = new Advertisement();
@@ -347,7 +393,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000012";
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.829';
+        $ad->longitude = '144.957';
         $ad->save();
         // 25
         $ad = new Advertisement();
@@ -361,7 +409,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000012";
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.829';
+        $ad->longitude = '144.957';
         $ad->save();
         // 26
         $ad = new Advertisement();
@@ -375,7 +425,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000012";
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.829';
+        $ad->longitude = '144.957';
         $ad->save();
         // 27
         $ad = new Advertisement();
@@ -389,7 +441,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000012";
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.829';
+        $ad->longitude = '144.957';
         $ad->save();
         // 28
         $ad = new Advertisement();
@@ -403,7 +457,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000012";
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.829';
+        $ad->longitude = '144.957';
         $ad->save();
         // 29
         $ad = new Advertisement();
@@ -417,7 +473,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000012";
         $ad->email = User::where('name', 'Lex Luthor')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.829';
+        $ad->longitude = '144.957';
         $ad->save();
         // 30
         $ad = new Advertisement();
@@ -431,7 +489,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000013";
         $ad->email = User::where('name', 'Malcolm Merlyn')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.801047';
+        $ad->longitude = '144.969861';
         $ad->save();
         // 31
         $ad = new Advertisement();
@@ -445,7 +505,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000013";
         $ad->email = User::where('name', 'Malcolm Merlyn')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.801047';
+        $ad->longitude = '144.969861';
         $ad->save();
         // 32
         $ad = new Advertisement();
@@ -459,7 +521,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000013";
         $ad->email = User::where('name', 'Malcolm Merlyn')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.801047';
+        $ad->longitude = '144.969861';
         $ad->save();
         // 33
         $ad = new Advertisement();
@@ -473,7 +537,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000013";
         $ad->email = User::where('name', 'Malcolm Merlyn')->value('email');
-        $ad->max_dist = 30;
+        $ad->max_dist = 30; 
+        $ad->latitude = '-37.801047';
+        $ad->longitude = '144.969861';
         $ad->save();
         // 34
         $ad = new Advertisement();
@@ -487,7 +553,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000014";
         $ad->email = User::where('name', 'Nick Fury')->value('email');
-        $ad->max_dist = 35;
+        $ad->max_dist = 35; 
+        $ad->latitude = '-37.767872';
+        $ad->longitude = '144.961929';
         $ad->save();
         // 35
         $ad = new Advertisement();
@@ -501,7 +569,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000014";
         $ad->email = User::where('name', 'Nick Fury')->value('email');
-        $ad->max_dist = 35;
+        $ad->max_dist = 35; 
+        $ad->latitude = '-37.767872';
+        $ad->longitude = '144.961929';
         $ad->save();
         // 36
         $ad = new Advertisement();
@@ -515,7 +585,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000014";
         $ad->email = User::where('name', 'Nick Fury')->value('email');
-        $ad->max_dist = 35;
+        $ad->max_dist = 35; 
+        $ad->latitude = '-37.767872';
+        $ad->longitude = '144.961929';
         $ad->save();
         // 37
         $ad = new Advertisement();
@@ -529,7 +601,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 38
         $ad = new Advertisement();
@@ -543,7 +617,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 39
         $ad = new Advertisement();
@@ -557,7 +633,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 40
         $ad = new Advertisement();
@@ -571,7 +649,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 41
         $ad = new Advertisement();
@@ -585,7 +665,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 42
         $ad = new Advertisement();
@@ -599,7 +681,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 43
         $ad = new Advertisement();
@@ -613,7 +697,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 44
         $ad = new Advertisement();
@@ -627,7 +713,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 45
         $ad = new Advertisement();
@@ -641,7 +729,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 46
         $ad = new Advertisement();
@@ -655,7 +745,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 47
         $ad = new Advertisement();
@@ -669,7 +761,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 48
         $ad = new Advertisement();
@@ -683,7 +777,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 49
         $ad = new Advertisement();
@@ -697,7 +793,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 50 
         $ad = new Advertisement();
@@ -711,7 +809,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 51
         $ad = new Advertisement();
@@ -725,7 +825,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 52
         $ad = new Advertisement();
@@ -739,7 +841,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 53
         $ad = new Advertisement();
@@ -753,7 +857,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 54
         $ad = new Advertisement();
@@ -767,7 +873,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 55
         $ad = new Advertisement();
@@ -781,7 +889,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 56
         $ad = new Advertisement();
@@ -795,7 +905,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 57
         $ad = new Advertisement();
@@ -809,7 +921,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 58
         $ad = new Advertisement();
@@ -823,7 +937,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 59
         $ad = new Advertisement();
@@ -837,7 +953,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 60
         $ad = new Advertisement();
@@ -851,7 +969,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 61
         $ad = new Advertisement();
@@ -865,7 +985,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 62
         $ad = new Advertisement();
@@ -879,7 +1001,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 63
         $ad = new Advertisement();
@@ -893,7 +1017,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000015";
         $ad->email = User::where('name', 'Oliver Queen')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.818635';
+        $ad->longitude = '145.00147';
         $ad->save();
         // 64
         $ad = new Advertisement();
@@ -907,7 +1033,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000016";
         $ad->email = User::where('name', 'Peter Parker')->value('email');
-        $ad->max_dist = 40;
+        $ad->max_dist = 40; 
+        $ad->latitude = '-37.76';
+        $ad->longitude = '145.007';
         $ad->save();
         // 65
         $ad = new Advertisement();
@@ -921,7 +1049,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000016";
         $ad->email = User::where('name', 'Peter Parker')->value('email');
-        $ad->max_dist = 40;
+        $ad->max_dist = 40; 
+        $ad->latitude = '-37.76';
+        $ad->longitude = '145.007';
         $ad->save();
         // 66
         $ad = new Advertisement();
@@ -935,7 +1065,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000016";
         $ad->email = User::where('name', 'Peter Parker')->value('email');
-        $ad->max_dist = 40;
+        $ad->max_dist = 40; 
+        $ad->latitude = '-37.76';
+        $ad->longitude = '145.007';
         $ad->save();
         // 67
         $ad = new Advertisement();
@@ -949,7 +1081,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000016";
         $ad->email = User::where('name', 'Peter Parker')->value('email');
-        $ad->max_dist = 40;
+        $ad->max_dist = 40; 
+        $ad->latitude = '-37.76';
+        $ad->longitude = '145.007';
         $ad->save();
         // 68
         $ad = new Advertisement();
@@ -963,7 +1097,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000016";
         $ad->email = User::where('name', 'Peter Parker')->value('email');
-        $ad->max_dist = 40;
+        $ad->max_dist = 40; 
+        $ad->latitude = '-37.76';
+        $ad->longitude = '145.007';
         $ad->save();
         // 69   
         $ad = new Advertisement();
@@ -977,7 +1113,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000017";
         $ad->email = User::where('name', 'Qunintin Lance')->value('email');
-        $ad->max_dist = 60;
+        $ad->max_dist = 60; 
+        $ad->latitude = '-37.741664';
+        $ad->longitude = '144.962806';
         $ad->save();
         // 70
         $ad = new Advertisement();
@@ -991,7 +1129,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000018";
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.878543';
+        $ad->longitude = '145.164812';
         $ad->save();
         // 71   
         $ad = new Advertisement();
@@ -1005,7 +1145,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000018";
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.878543';
+        $ad->longitude = '145.164812';
         $ad->save();
         // 72
         $ad = new Advertisement();
@@ -1019,7 +1161,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000018";
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.878543';
+        $ad->longitude = '145.164812';
         $ad->save();
         // 73
         $ad = new Advertisement();
@@ -1033,7 +1177,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000018";
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.878543';
+        $ad->longitude = '145.164812';
         $ad->save();
         // 74
         $ad = new Advertisement();
@@ -1047,7 +1193,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000018";
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.878543';
+        $ad->longitude = '145.164812';
         $ad->save();
         // 75
         $ad = new Advertisement();
@@ -1061,7 +1209,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000018";
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.878543';
+        $ad->longitude = '145.164812';
         $ad->save();
         // 76
         $ad = new Advertisement();
@@ -1075,7 +1225,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000018";
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.878543';
+        $ad->longitude = '145.164812';
         $ad->save();
         // 77
         $ad = new Advertisement();
@@ -1089,7 +1241,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000018";
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.878543';
+        $ad->longitude = '145.164812';
         $ad->save();
         // 78
         $ad = new Advertisement();
@@ -1103,7 +1257,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000018";
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.878543';
+        $ad->longitude = '145.164812';
         $ad->save();
         // 79
         $ad = new Advertisement();
@@ -1117,7 +1273,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000018";
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.878543';
+        $ad->longitude = '145.164812';
         $ad->save();
         // 80
         $ad = new Advertisement();
@@ -1131,7 +1289,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000018";
         $ad->email = User::where('name', 'Ray Palmer')->value('email');
-        $ad->max_dist = 50;
+        $ad->max_dist = 50; 
+        $ad->latitude = '-37.878543';
+        $ad->longitude = '145.164812';
         $ad->save();
         // 81
         $ad = new Advertisement();
@@ -1145,7 +1305,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000019";
         $ad->email = User::where('name', 'Selina Kyle')->value('email');
-        $ad->max_dist = 25;
+        $ad->max_dist = 25; 
+        $ad->latitude = '-37.887876';
+        $ad->longitude = '145.095203';
         $ad->save();
         // 82
         $ad = new Advertisement();
@@ -1159,7 +1321,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000019";
         $ad->email = User::where('name', 'Selina Kyle')->value('email');
-        $ad->max_dist = 25;
+        $ad->max_dist = 25; 
+        $ad->latitude = '-37.887876';
+        $ad->longitude = '145.095203';
         $ad->save();
         // 83
         $ad = new Advertisement();
@@ -1173,7 +1337,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000019";
         $ad->email = User::where('name', 'Selina Kyle')->value('email');
-        $ad->max_dist = 25;
+        $ad->max_dist = 25; 
+        $ad->latitude = '-37.887876';
+        $ad->longitude = '145.095203';
         $ad->save();
         // 84
         $ad = new Advertisement();
@@ -1187,7 +1353,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000019";
         $ad->email = User::where('name', 'Selina Kyle')->value('email');
-        $ad->max_dist = 25;
+        $ad->max_dist = 25; 
+        $ad->latitude = '-37.887876';
+        $ad->longitude = '145.095203';
         $ad->save();
         // 85
         $ad = new Advertisement();
@@ -1201,7 +1369,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000019";
         $ad->email = User::where('name', 'Selina Kyle')->value('email');
-        $ad->max_dist = 25;
+        $ad->max_dist = 25; 
+        $ad->latitude = '-37.887876';
+        $ad->longitude = '145.095203';
         $ad->save();
         // 86
         $ad = new Advertisement();
@@ -1215,7 +1385,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000019";
         $ad->email = User::where('name', 'Selina Kyle')->value('email');
-        $ad->max_dist = 25;
+        $ad->max_dist = 25; 
+        $ad->latitude = '-37.887876';
+        $ad->longitude = '145.095203';
         $ad->save();
         // 87
         $ad = new Advertisement();
@@ -1229,7 +1401,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000020";
         $ad->email = User::where('name', 'Thor Odinson')->value('email');
-        $ad->max_dist = 40;
+        $ad->max_dist = 40; 
+        $ad->latitude = '-37.857';
+        $ad->longitude = '145.036';
         $ad->save();
         // 88
         $ad = new Advertisement();
@@ -1243,7 +1417,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000020";
         $ad->email = User::where('name', 'Thor Odinson')->value('email');
-        $ad->max_dist = 40;
+        $ad->max_dist = 40; 
+        $ad->latitude = '-37.857';
+        $ad->longitude = '145.036';
         $ad->save();
         // 89
         $ad = new Advertisement();
@@ -1257,7 +1433,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000020";
         $ad->email = User::where('name', 'Thor Odinson')->value('email');
-        $ad->max_dist = 40;
+        $ad->max_dist = 40; 
+        $ad->latitude = '-37.857';
+        $ad->longitude = '145.036';
         $ad->save();
         // 90
         $ad = new Advertisement();
@@ -1271,7 +1449,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000020";
         $ad->email = User::where('name', 'Thor Odinson')->value('email');
-        $ad->max_dist = 40;
+        $ad->max_dist = 40; 
+        $ad->latitude = '-37.857';
+        $ad->longitude = '145.036';
         $ad->save();
         // 91
         $ad = new Advertisement();
@@ -1285,7 +1465,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000021";
         $ad->email = User::where('name', 'Vandal Savage')->value('email');
-        $ad->max_dist = 40;
+        $ad->max_dist = 40; 
+        $ad->latitude = '-37.69706';
+        $ad->longitude = '145.059002';
         $ad->save();
         // 92
         $ad = new Advertisement();
@@ -1299,7 +1481,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000021";
         $ad->email = User::where('name', 'Vandal Savage')->value('email');
-        $ad->max_dist = 40;
+        $ad->max_dist = 40; 
+        $ad->latitude = '-37.69706';
+        $ad->longitude = '145.059002';
         $ad->save();
         // 93
         $ad = new Advertisement();
@@ -1313,7 +1497,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000021";
         $ad->email = User::where('name', 'Vandal Savage')->value('email');
-        $ad->max_dist = 40;
+        $ad->max_dist = 40; 
+        $ad->latitude = '-37.69706';
+        $ad->longitude = '145.059002';
         $ad->save();
         // 94
         $ad = new Advertisement();
@@ -1327,7 +1513,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000022";
         $ad->email = User::where('name', 'Wally West')->value('email');
-        $ad->max_dist = 40;
+        $ad->max_dist = 40; 
+        $ad->latitude = '-37.741667';
+        $ad->longitude = '144.863056';
         $ad->save();
         // 95
         $ad = new Advertisement();
@@ -1341,7 +1529,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000023";
         $ad->email = User::where('name', 'Zantanna Zatara')->value('email');
-        $ad->max_dist = 40;
+        $ad->max_dist = 40; 
+        $ad->latitude = '-37.741667';
+        $ad->longitude = '144.863056';
         $ad->save();
         // 96
         $ad = new Advertisement();
@@ -1355,7 +1545,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000023";
         $ad->email = User::where('name', 'Zantanna Zatara')->value('email');
-        $ad->max_dist = 40;
+        $ad->max_dist = 40; 
+        $ad->latitude = '-37.741667';
+        $ad->longitude = '144.863056';
         $ad->save();
         // 97
         $ad = new Advertisement();
@@ -1369,7 +1561,9 @@ class AdvertisementTableSeeder extends Seeder
         $ad->state = "VIC";
         $ad->phone = "0400000023";
         $ad->email = User::where('name', 'Zantanna Zatara')->value('email');
-        $ad->max_dist = 40;
+        $ad->max_dist = 40; 
+        $ad->latitude = '-37.741667';
+        $ad->longitude = '144.863056';
         $ad->save();
     }
 }
