@@ -41,8 +41,10 @@ class SearchesController extends Controller
      */
     public function index($id)
     { 
+        //Finds current search form
         $search = Search::find($id);
         
+        // gets all ads filtered by service type and quote
         $ads =  Advertisement::where('service', '=', $search->service) //service
                     ->whereBetween('quote', [$search->quote_min, $search->quote_max])
                     ->paginate(10);
@@ -50,17 +52,22 @@ class SearchesController extends Controller
         $count = 0;
         foreach($ads as $ad)
         {
+            // Fitlers out ads that are out of range
             $distance = $search->getDistance($ad->latitude, $ad->longitude, $search->latitude, $search->longitude);
             if($distance < $ad->max_dist)
             {
                 $count ++;
-            }
+            } 
         }
+
+        // get all reviews
+        $reviews = Review::orderBy('id','asc')->get();
 
         return view('searches.index')
                     ->with('ads', $ads)
                     ->with('search', $search)
-                    ->with('count', $count);
+                    ->with('count', $count)
+                    ->with('reviews', $reviews);
     }
 
     /**

@@ -31,8 +31,5 @@ class Search extends Model
         return $d;  
     }
 
-    public function getSomething($a)
-    {
-        return $a;
-    }
+
 }
