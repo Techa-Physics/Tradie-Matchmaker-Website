@@ -42,15 +42,25 @@ class SearchesController extends Controller
     public function index($id)
     { 
         $search = Search::find($id);
-
+        
         $ads =  Advertisement::where('service', '=', $search->service) //service
                     ->whereBetween('quote', [$search->quote_min, $search->quote_max])
                     ->paginate(10);
-                    //->all();
+
+        $count = 0;
+        foreach($ads as $ad)
+        {
+            $distance = $search->getDistance($ad->latitude, $ad->longitude, $search->latitude, $search->longitude);
+            if($distance < $ad->max_dist)
+            {
+                $count ++;
+            }
+        }
 
         return view('searches.index')
                     ->with('ads', $ads)
-                    ->with('search', $search);
+                    ->with('search', $search)
+                    ->with('count', $count);
     }
 
     /**
