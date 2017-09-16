@@ -59,7 +59,7 @@
                             @foreach($searches as $search)
                                 <tr>
                                     <td>{{ $search->service }}</td>
-                                    <td>{{ $search->location }}</td>
+                                    <td>{{ $search->town }}, {{ $search->postcode }}</td>
                                     @if( $search->quote_min  ==  $search->quote_max )
                                         <td><center>${{ $search->quote_min }}</center></td>
                                     @else

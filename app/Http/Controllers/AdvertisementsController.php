@@ -55,7 +55,9 @@ class AdvertisementsController extends Controller
             'service' => 'required',
             'quote' => 'required',
             'body' => 'required',
-            'location' => 'required',
+            'town' => 'required',
+            'postcode' => 'required',
+            'state' => 'required',
             'phone' => 'required',
             'max_dist' => 'required',
         ]);
@@ -67,7 +69,9 @@ class AdvertisementsController extends Controller
         $ad->quote = $request->input('quote');
         $ad->body = $request->input('body');
         $ad->user_id = auth()->user()->id;
-        $ad->location = $request->input('location');
+        $ad->town = $request->input('town');
+        $ad->postcode = $request->input('postcode');
+        $ad->state = $request->input('state');
         $ad->phone = $request->input('phone');
         $ad->email = auth()->user()->email;
         $ad->max_dist = $request->input('max_dist');
@@ -129,7 +133,9 @@ class AdvertisementsController extends Controller
             'service' => 'required',
             'quote' => 'required',
             'body' => 'required',
-            'location' => 'required',
+            'town' => 'required',
+            'postcode' => 'required',
+            'state' => 'required',
             'phone' => 'required',
             'max_dist' => 'required',
         ]);
@@ -141,7 +147,9 @@ class AdvertisementsController extends Controller
         $ad->quote = $request->input('quote');
         $ad->body = $request->input('body');
         $ad->user_id = auth()->user()->id;
-        $ad->location = $request->input('location');
+        $ad->town = $request->input('town');
+        $ad->postcode = $request->input('postcode');
+        $ad->state = $request->input('state');
         $ad->phone = $request->input('phone');
         $ad->email = auth()->user()->email;
         $ad->max_dist = $request->input('max_dist');
@@ -160,8 +168,6 @@ class AdvertisementsController extends Controller
     {
         $ad = Advertisement::find($id);
         $ad->delete();
-
-
         return redirect('/profile')->with('success', 'Advertisement Deleted');
     }
 }

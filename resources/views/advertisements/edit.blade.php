@@ -34,11 +34,24 @@
         echo Form::text('quote', $ad->quote, ['class' => 'form-control', 'placeholder' => 'example: 0, 50, 100, ...']);
     ?></br>
 
-    <?php
+     <?php
     // Location
-        echo Form::label('location', 'Location');
-        echo Form::text('location', $ad->location, ['class' => 'form-control', 'placeholder' => 'eg. Sunbury, 3429']);
+        echo Form::label('town', 'Town');
+        echo Form::text('town', $ad->town, ['class' => 'form-control', 'placeholder' => 'eg. Sunbury']);
     ?></br>
+    
+    <?php
+        echo Form::label('postcode', 'Postcode');
+        echo Form::text('postcode', $ad->postcode, ['class' => 'form-control', 'placeholder' => 'eg. 3429']);
+    ?></br>
+
+    <?php
+        echo Form::label('state', 'State ');
+    ?></br>
+    <?php
+        echo Form::select('state', array($ad->state => $ad->state, 'NSW' => 'NSW', 'NT' => 'NT', 'QLD' => 'QLD', 
+                                    'SA' => 'SA','TAS' => 'TAS', 'VIC' => 'VIC', 'WA' => 'WA'));
+    ?></br></br>
 
     <?php
     // Phone Number

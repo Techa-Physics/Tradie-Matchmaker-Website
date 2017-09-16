@@ -25,8 +25,10 @@ class SearchesController extends Controller
 
         // Only service type is required to search with
         $this->searchRules = array(
-            'service' => 'required'//,
-            // 'location' => 'required_without_all:service,quote_min,quote_max,rating',
+            'service' => 'required',
+            'town' => 'required',
+            'postcode' => 'required',
+            'state' => 'required'//,
             // 'quote_min' => 'required_without_all:service,location,quote_max,rating',
             // 'quote_max' => 'required_without_all:service,location,quote_max,rating',
             // 'rating' => 'required_without_all:service,location,quote_min,quote_max,rating',
@@ -86,7 +88,9 @@ class SearchesController extends Controller
         //Create search
         $search = new Search;
         $search->service = $request->input('service');
-        $search->location = $request->input('location');
+        $search->town = $request->input('town');
+        $search->postcode = $request->input('postcode');
+        $search->state = $request->input('state');
         $search->quote_min = $request->input('quote_min');
         $search->quote_max = $request->input('quote_max');
         $search->rating = $request->input('rating');
@@ -140,7 +144,9 @@ class SearchesController extends Controller
         //Update search
         $search = Search::find($id);
         $search->service = $request->input('service');
-        $search->location = $request->input('location');
+        $search->town = $request->input('town');
+        $search->postcode = $request->input('postcode');
+        $search->state = $request->input('state');
         $search->quote_min = $request->input('quote_min');
         $search->quote_max = $request->input('quote_max');
         $search->rating = $request->input('rating');
