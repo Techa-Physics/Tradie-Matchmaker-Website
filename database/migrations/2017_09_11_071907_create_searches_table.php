@@ -17,7 +17,6 @@ class CreateSearchesTable extends Migration
             $table->string('service');
             $table->string('town');
             $table->integer('postcode');
-            $table->string('state');
             $table->integer('quote_min');
             $table->integer('quote_max');
             $table->integer('rating');

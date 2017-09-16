@@ -46,14 +46,6 @@
     ?></br>
 
     <?php
-        echo Form::label('state', 'State ');
-    ?></br>
-    <?php
-        echo Form::select('state', array($ad->state => $ad->state, 'NSW' => 'NSW', 'NT' => 'NT', 'QLD' => 'QLD', 
-                                    'SA' => 'SA','TAS' => 'TAS', 'VIC' => 'VIC', 'WA' => 'WA'));
-    ?></br></br>
-
-    <?php
     // Phone Number
         echo Form::label('phone', 'Contact Number');
         echo Form::text('phone', $ad->phone, ['class' => 'form-control', 'placeholder' => 'eg. 0412345678']);

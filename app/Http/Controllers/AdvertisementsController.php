@@ -57,16 +57,14 @@ class AdvertisementsController extends Controller
             'body' => 'required',
             'town' => 'required',
             'postcode' => 'required',
-            'state' => 'required',
             'phone' => 'required',
             'max_dist' => 'required',
         ]);
         
         $town = $request->input('town');
-        $state = $request->input('state');
         $postcode = $request->input('postcode');
 
-        $address = "$town $state $postcode, Australia"; 
+        $address = "$town $postcode, Australia"; 
         $prepAddr = str_replace(' ','+',$address);
         $geocode=file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
         
@@ -84,7 +82,6 @@ class AdvertisementsController extends Controller
         $ad->user_id = auth()->user()->id;
         $ad->town = $request->input('town');
         $ad->postcode = $request->input('postcode');
-        $ad->state = $request->input('state');
         $ad->phone = $request->input('phone');
         $ad->email = auth()->user()->email;
         $ad->max_dist = $request->input('max_dist');
@@ -155,16 +152,14 @@ class AdvertisementsController extends Controller
             'body' => 'required',
             'town' => 'required',
             'postcode' => 'required',
-            'state' => 'required',
             'phone' => 'required',
             'max_dist' => 'required',
         ]);
 
         $town = $request->input('town');
-        $state = $request->input('state');
         $postcode = $request->input('postcode');
 
-        $address = "$town $state $postcode, Australia"; 
+        $address = "$town $postcode, Australia"; 
         $prepAddr = str_replace(' ','+',$address);
         $geocode=file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
         
@@ -182,7 +177,6 @@ class AdvertisementsController extends Controller
         $ad->user_id = auth()->user()->id;
         $ad->town = $request->input('town');
         $ad->postcode = $request->input('postcode');
-        $ad->state = $request->input('state');
         $ad->phone = $request->input('phone');
         $ad->email = auth()->user()->email;
         $ad->max_dist = $request->input('max_dist');

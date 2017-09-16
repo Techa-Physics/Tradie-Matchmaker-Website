@@ -42,14 +42,6 @@
     ?></br>
 
     <?php
-        echo Form::label('state', 'State*');
-    ?></br>
-    <?php
-        echo Form::select('state', array('NSW' => 'NSW', 'NT' => 'NT', 'QLD' => 'QLD', 'SA' => 'SA',
-                            'TAS' => 'TAS', 'VIC' => 'VIC', 'WA' => 'WA'));
-    ?></br></br>
-
-    <?php
     // minimum rating
         echo Form::label('rating', 'Minimum Rating');?></br><?php
         echo Form::selectRange('rating', 0,5);

@@ -22,7 +22,7 @@
         <label>Person: {{ $user->name }}</label></br>
         <label>Mobile Number: {{$ad->phone}}</label></br>
         <label>Email: {{$ad->email}}</label></br>
-        <label>Location: {{$ad->town}}, {{ $ad->postcode}}, {{ $ad->state }}</label></br></br>
+        <label>Location: {{$ad->town}}, {{ $ad->postcode}}}</label></br></br>
 
         <label>Rating: {{ number_format($rating, 1) }}/5</label>
 

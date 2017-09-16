@@ -27,8 +27,7 @@ class SearchesController extends Controller
         $this->searchRules = array(
             'service' => 'required',
             'town' => 'required',
-            'postcode' => 'required',
-            'state' => 'required'//,
+            'postcode' => 'required'//,
             // 'quote_min' => 'required_without_all:service,location,quote_max,rating',
             // 'quote_max' => 'required_without_all:service,location,quote_max,rating',
             // 'rating' => 'required_without_all:service,location,quote_min,quote_max,rating',
@@ -102,10 +101,9 @@ class SearchesController extends Controller
         $this->validate($request, $this->searchRules);
 
         $town = $request->input('town');
-        $state = $request->input('state');
         $postcode = $request->input('postcode');
 
-        $address = "$town $state $postcode, Australia"; 
+        $address = "$town $postcode, Australia"; 
         $prepAddr = str_replace(' ','+',$address);
         $geocode=file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
         
@@ -119,7 +117,6 @@ class SearchesController extends Controller
         $search->service = $request->input('service');
         $search->town = $request->input('town');
         $search->postcode = $request->input('postcode');
-        $search->state = $request->input('state');
         $search->quote_min = $request->input('quote_min');
         $search->quote_max = $request->input('quote_max');
         $search->rating = $request->input('rating');
@@ -172,10 +169,9 @@ class SearchesController extends Controller
         $this->validate($request, $this->searchRules);
 
         $town = $request->input('town');
-        $state = $request->input('state');
         $postcode = $request->input('postcode');
 
-        $address = "$town $state $postcode, Australia"; 
+        $address = "$town $postcode, Australia"; 
         $prepAddr = str_replace(' ','+',$address);
         $geocode=file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
         
@@ -189,7 +185,6 @@ class SearchesController extends Controller
         $search->service = $request->input('service');
         $search->town = $request->input('town');
         $search->postcode = $request->input('postcode');
-        $search->state = $request->input('state');
         $search->quote_min = $request->input('quote_min');
         $search->quote_max = $request->input('quote_max');
         $search->rating = $request->input('rating');

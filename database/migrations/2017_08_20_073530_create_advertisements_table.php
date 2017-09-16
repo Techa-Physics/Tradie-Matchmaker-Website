@@ -22,8 +22,7 @@ class CreateAdvertisementsTable extends Migration
             $table->mediumText('body');            
             $table->integer('user_id')->unsigned(); 
             $table->string('town');
-            $table->integer('postcode');
-            $table->string('state');            
+            $table->integer('postcode');           
             $table->string('phone');                
             $table->string('email');                            
             $table->integer('max_dist');     
