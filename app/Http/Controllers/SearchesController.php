@@ -25,8 +25,9 @@ class SearchesController extends Controller
 
         // Only service type is required to search with
         $this->searchRules = array(
-            'service' => 'required'//,
-            // 'location' => 'required_without_all:service,quote_min,quote_max,rating',
+            'service' => 'required',
+            'town' => 'required',
+            'postcode' => 'required'//,
             // 'quote_min' => 'required_without_all:service,location,quote_max,rating',
             // 'quote_max' => 'required_without_all:service,location,quote_max,rating',
             // 'rating' => 'required_without_all:service,location,quote_min,quote_max,rating',
@@ -39,16 +40,33 @@ class SearchesController extends Controller
      */
     public function index($id)
     { 
+        //Finds current search form
         $search = Search::find($id);
-
+        
+        // gets all ads filtered by service type and quote
         $ads =  Advertisement::where('service', '=', $search->service) //service
                     ->whereBetween('quote', [$search->quote_min, $search->quote_max])
                     ->paginate(10);
-                    //->all();
+
+        $count = 0;
+        foreach($ads as $ad)
+        {
+            // Fitlers out ads that are out of range
+            $distance = $search->getDistance($ad->latitude, $ad->longitude, $search->latitude, $search->longitude);
+            if($distance < $ad->max_dist)
+            {
+                $count ++;
+            } 
+        }
+
+        // get all reviews
+        $reviews = Review::orderBy('id','asc')->get();
 
         return view('searches.index')
                     ->with('ads', $ads)
-                    ->with('search', $search);
+                    ->with('search', $search)
+                    ->with('count', $count)
+                    ->with('reviews', $reviews);
     }
 
     /**
@@ -82,16 +100,30 @@ class SearchesController extends Controller
 
         $this->validate($request, $this->searchRules);
 
+        $town = $request->input('town');
+        $postcode = $request->input('postcode');
+
+        $address = "$town $postcode, Australia"; 
+        $prepAddr = str_replace(' ','+',$address);
+        $geocode=file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
+        
+        $output= json_decode($geocode);
+        
+        $lat = $output->results[0]->geometry->location->lat;
+        $long = $output->results[0]->geometry->location->lng;
 
         //Create search
         $search = new Search;
         $search->service = $request->input('service');
-        $search->location = $request->input('location');
+        $search->town = $request->input('town');
+        $search->postcode = $request->input('postcode');
         $search->quote_min = $request->input('quote_min');
         $search->quote_max = $request->input('quote_max');
         $search->rating = $request->input('rating');
         // Since searches are serverside, we will use id of 0 to store guest searches
         $search->user_id = Auth::user() ? auth()->user()->id : 0;   
+        $search->latitude = $lat;
+        $search->longitude = $long;
         $search->save();
 
         $last = Search::orderBy('created_at', 'desc')->first();
@@ -136,15 +168,29 @@ class SearchesController extends Controller
 
         $this->validate($request, $this->searchRules);
 
+        $town = $request->input('town');
+        $postcode = $request->input('postcode');
+
+        $address = "$town $postcode, Australia"; 
+        $prepAddr = str_replace(' ','+',$address);
+        $geocode=file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
+        
+        $output= json_decode($geocode);
+        
+        $lat = $output->results[0]->geometry->location->lat;
+        $long = $output->results[0]->geometry->location->lng;
 
         //Update search
         $search = Search::find($id);
         $search->service = $request->input('service');
-        $search->location = $request->input('location');
+        $search->town = $request->input('town');
+        $search->postcode = $request->input('postcode');
         $search->quote_min = $request->input('quote_min');
         $search->quote_max = $request->input('quote_max');
         $search->rating = $request->input('rating');
         $search->user_id = Auth::user() ? auth()->user()->id : 0;   
+        $search->latitude = $lat;
+        $search->longitude = $long;
         $search->save();
 
         return redirect("/searches/$id");

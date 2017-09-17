@@ -7,13 +7,14 @@
 ?>
 
 <h1><center>Find your matches</center></h1>
+<p>The marked with * are required.<p>
 
 {!! Form::open(['action' => 'SearchesController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
  
     <?php
     // Service type 
         $list = ['' => 'Select category'] + $categories;
-        echo Form::label('service', 'Service Type');?></br><?php
+        echo Form::label('service', 'Service Type*');?></br><?php
         echo Form:: select('service', $list);
     ?></br></br>
 
@@ -31,8 +32,13 @@
 
     <?php
     // Location
-        echo Form::label('location', 'Location');
-        echo Form::text('location', '', ['class' => 'form-control', 'placeholder' => 'eg. Sunbury, 3429']);
+        echo Form::label('town', 'Town*');
+        echo Form::text('town', '', ['class' => 'form-control', 'placeholder' => 'eg. Sunbury']);
+    ?></br>
+    
+    <?php
+        echo Form::label('postcode', 'Postcode*');
+        echo Form::text('postcode', '', ['class' => 'form-control', 'placeholder' => 'eg. 3429']);
     ?></br>
 
     <?php

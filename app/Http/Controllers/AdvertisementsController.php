@@ -55,10 +55,23 @@ class AdvertisementsController extends Controller
             'service' => 'required',
             'quote' => 'required',
             'body' => 'required',
-            'location' => 'required',
+            'town' => 'required',
+            'postcode' => 'required',
             'phone' => 'required',
             'max_dist' => 'required',
         ]);
+        
+        $town = $request->input('town');
+        $postcode = $request->input('postcode');
+
+        $address = "$town $postcode, Australia"; 
+        $prepAddr = str_replace(' ','+',$address);
+        $geocode=file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
+        
+        $output= json_decode($geocode);
+        
+        $lat = $output->results[0]->geometry->location->lat;
+        $long = $output->results[0]->geometry->location->lng;
 
         //Create advertisement
         $ad = new Advertisement;
@@ -67,10 +80,13 @@ class AdvertisementsController extends Controller
         $ad->quote = $request->input('quote');
         $ad->body = $request->input('body');
         $ad->user_id = auth()->user()->id;
-        $ad->location = $request->input('location');
+        $ad->town = $request->input('town');
+        $ad->postcode = $request->input('postcode');
         $ad->phone = $request->input('phone');
         $ad->email = auth()->user()->email;
         $ad->max_dist = $request->input('max_dist');
+        $ad->latitude = $lat;
+        $ad->longitude = $long;
         $ad->save();
 
         return redirect('/profile')->with('success', 'Advertisement Created');
@@ -93,6 +109,8 @@ class AdvertisementsController extends Controller
         $rating = Review::where('ad_id',$ad->id)
                     ->avg('rating');
 
+        
+       // return $address;
         return view('advertisements.show')
                     ->with('ad', $ad)
                     ->with('user',$user)
@@ -112,7 +130,10 @@ class AdvertisementsController extends Controller
         $categories = Categories::lists('category','category')->all();
         $ad = Advertisement::find($id);
         $service = Categories::where('category','=',$ad->service)->first();
-        return view('advertisements.edit')->with('ad', $ad)->with('categories', $categories)->with('service',$service);
+        return view('advertisements.edit')
+                    ->with('ad', $ad)
+                    ->with('categories', $categories)
+                    ->with('service',$service);
     }
 
     /**
@@ -129,10 +150,23 @@ class AdvertisementsController extends Controller
             'service' => 'required',
             'quote' => 'required',
             'body' => 'required',
-            'location' => 'required',
+            'town' => 'required',
+            'postcode' => 'required',
             'phone' => 'required',
             'max_dist' => 'required',
         ]);
+
+        $town = $request->input('town');
+        $postcode = $request->input('postcode');
+
+        $address = "$town $postcode, Australia"; 
+        $prepAddr = str_replace(' ','+',$address);
+        $geocode=file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
+        
+        $output= json_decode($geocode);
+        
+        $lat = $output->results[0]->geometry->location->lat;
+        $long = $output->results[0]->geometry->location->lng;
 
         //Create advertisement
         $ad = Advertisement::find($id);
@@ -141,10 +175,13 @@ class AdvertisementsController extends Controller
         $ad->quote = $request->input('quote');
         $ad->body = $request->input('body');
         $ad->user_id = auth()->user()->id;
-        $ad->location = $request->input('location');
+        $ad->town = $request->input('town');
+        $ad->postcode = $request->input('postcode');
         $ad->phone = $request->input('phone');
         $ad->email = auth()->user()->email;
         $ad->max_dist = $request->input('max_dist');
+        $ad->latitude = $lat;
+        $ad->longitude = $long;
         $ad->save();
 
         return redirect('/profile')->with('success', 'Advertisement Updated');
@@ -160,8 +197,6 @@ class AdvertisementsController extends Controller
     {
         $ad = Advertisement::find($id);
         $ad->delete();
-
-
         return redirect('/profile')->with('success', 'Advertisement Deleted');
     }
 }

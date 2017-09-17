@@ -29,4 +29,10 @@ class Advertisement extends Model
     {
         return $this->hasMany('App\Review');
     }
+
+    public function getRating($id)
+    {
+        $rating = Review::where('ad_id',$id)->avg('rating');
+        return $rating;
+    }
 }
