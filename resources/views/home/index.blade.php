@@ -10,7 +10,7 @@
     @if(Auth::check())
 
     @else
-    <p>Please Login or Regsiter.</p>
+    <p>Please Login or Register.</p>
     <p>
         <a class = 'btn btn-primary btn-lg' href = '/auth/login' role = 'button'   >Login</a>
         <a class = 'btn btn-success btn-lg' href = '/auth/register' role = 'button'>Register</a>
