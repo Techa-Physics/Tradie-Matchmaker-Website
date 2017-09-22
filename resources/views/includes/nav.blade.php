@@ -10,9 +10,6 @@
 			<a class="navbar-brand" href="{{ url('/') }}">Where's My Tradie</a> 
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            
-        
-
             <!-- Right side of navagation bar -->
 			<ul class="nav navbar-nav navbar-right">
                 @if(Auth::guest())
@@ -25,6 +22,7 @@
 
 			</ul>
 		</div>
+		
         <div id="navbarsub" class="navbarsubclass">
             <ul class="nav navbar-nav">
 
