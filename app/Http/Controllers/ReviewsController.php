@@ -100,6 +100,13 @@ class ReviewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $review = Review::find($id);
+
+        if($review != null) {
+            $review->delete();
+            return back()->with("success", "Review Deleted");
+        } else {
+            return back()->with("error", "Review Not Found");
+        }
     }
 }

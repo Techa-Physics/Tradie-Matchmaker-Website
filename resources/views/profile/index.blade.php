@@ -79,9 +79,11 @@
                             @endforeach
                         </table>
                         @endif
-                    @else
+                    @elseif(Auth::user()->hasRole("Admin"))
                         <div class="panel-heading"><h3>Admin</h3> </div>
                         <div class="panel-body">
+                    @else 
+                        <div class="panel-heading"><h3>Unknown user role, contact webmaster.</h3> </div>
                     @endif     
                 </div>
             </div>
