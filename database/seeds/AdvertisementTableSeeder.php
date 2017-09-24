@@ -4361,7 +4361,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->email = User::where('name', 'Dolph Kong')->value('email');
         $ad->max_dist = 85; 
         $ad->latitude = '-37.814640';
-        $ad->longitude = 144.972027';
+        $ad->longitude = '144.972027';
         $ad->save();
 		// 287
         $ad = new Advertisement();
