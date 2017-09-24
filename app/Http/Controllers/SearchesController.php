@@ -21,7 +21,7 @@ class SearchesController extends Controller
 
     public function __construct()
     {
-        // $this->middleware('auth');
+        $this->middleware('auth');
 
         // Only service type is required to search with
         $this->searchRules = array(
@@ -120,8 +120,7 @@ class SearchesController extends Controller
         $search->quote_min = $request->input('quote_min');
         $search->quote_max = $request->input('quote_max');
         $search->rating = $request->input('rating');
-        // Since searches are serverside, we will use id of 0 to store guest searches
-        $search->user_id = Auth::user() ? auth()->user()->id : 0;   
+        $search->user_id = auth()->user()->id;
         $search->latitude = $lat;
         $search->longitude = $long;
         $search->save();
@@ -188,7 +187,7 @@ class SearchesController extends Controller
         $search->quote_min = $request->input('quote_min');
         $search->quote_max = $request->input('quote_max');
         $search->rating = $request->input('rating');
-        $search->user_id = Auth::user() ? auth()->user()->id : 0;   
+        $search->user_id = auth()->user()->id;   
         $search->latitude = $lat;
         $search->longitude = $long;
         $search->save();

@@ -11,6 +11,7 @@ use App\Categories;
 use App\User;
 use App\Review;
 use DB;
+use Auth;
 
 class AdvertisementsController extends Controller
 {
@@ -196,7 +197,20 @@ class AdvertisementsController extends Controller
     public function destroy($id)
     {
         $ad = Advertisement::find($id);
-        $ad->delete();
-        return redirect('/profile')->with('success', 'Advertisement Deleted');
+
+        if($ad != null) {
+            $ad->delete();
+            if (Auth::user()->hasRole("Business")) {
+                return redirect('/profile')->with('success', 'Advertisement Deleted');
+            } else {
+                return redirect('/advertisements')->with('success', 'Advertisement Deleted');
+            }
+        } else {
+            if (Auth::user()->hasRole("Business")) {
+                return redirect('/profile')->with('error', 'Advertisement Not Found');
+            } else {
+                return redirect('/advertisements')->with('error', 'Advertisement Not Found');
+            }
+        }
     }
 }

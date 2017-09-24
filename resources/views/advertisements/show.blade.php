@@ -42,6 +42,14 @@
             @if(Auth::user()->hasRole("Personal"))
                 <a href='/reviews/{{$ad->id}}/create' class='btn btn-warning'>Write Review</a>
             @endif
+            @if(Auth::user()->hasRole("Admin"))
+                {!!Form::open(['action' => ['AdvertisementsController@destroy', $ad->id], 'method' => 'POST', 'style' => 'display:inline-block'])!!}
+                    <?php
+                        echo Form::hidden('_method', 'DELETE');
+                        echo Form::submit('Delete', ['class' => 'btn btn-danger']);
+                    ?>
+                {!!Form::close()!!}
+            @endif
         @endif
     </div>
     </br>
@@ -57,12 +65,23 @@
                                     <th>Title</th>
                                     <th>Description</th>
                                     <th><center>Rating</center></th>
+                                    <th></th>
                                 </tr>
                             @foreach($review as $view)
                                 <tr>
                                     <td>{{ $view->name }}</td>
                                     <td>{{ $view->description }}</td>
                                     <td><center>{{ $view->rating }}/5</center></td>
+                                    @if(Auth::user()->HasRole("Admin"))
+                                        <td>
+                                            {!!Form::open(['action' => ['ReviewsController@destroy', $view->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
+                                                <?php
+                                                    echo Form::hidden('_method', 'DELETE');
+                                                    echo Form::submit('Delete', ['class' => 'btn btn-danger']);
+                                                ?>
+                                            {!!Form::close()!!}
+                                        </td>
+                                    @endif
                                 </tr>
                                
                             @endforeach
