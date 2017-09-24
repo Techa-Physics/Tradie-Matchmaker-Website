@@ -1657,7 +1657,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->town = "Essendon";
         $ad->postcode = 3040;
         $ad->phone = "0414937281";
-        $ad->email = User::where('name', 'Sean Paule')->value('email');
+        $ad->email = User::where('name', 'Sean Puale')->value('email');
         $ad->max_dist = 510;
         $ad->latitude = '-37.752253';
         $ad->longitude = '144.890056';
@@ -1743,11 +1743,11 @@ class AdvertisementTableSeeder extends Seeder
         $ad->service = "Carpet Cleaning";
         $ad->quote = 0;
         $ad->body = "We'll help you no matter the issue!";
-        $ad->user_id = User::where('name', 'Nick Morgov ')->value('id');
+        $ad->user_id = User::where('name', 'Nick Morgov')->value('id');
         $ad->town = "Balwyn";
         $ad->postcode = 3103;
         $ad->phone = "0431510128";
-        $ad->email = User::where('name', 'Nick Morgov ')->value('email');
+        $ad->email = User::where('name', 'Nick Morgov')->value('email');
         $ad->max_dist = 55; 
         $ad->latitude = '-37.812414';
         $ad->longitude = '145.093326';
@@ -1789,7 +1789,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->quote = 0;
         $ad->body = "Save you, save me!!.";
         $ad->user_id = User::where('name', 'Lubor Instrunio')->value('id');
-        $ad->town = Keilor East";
+        $ad->town = "Keilor East";
         $ad->postcode = 3033;
         $ad->phone = "0431426981";
         $ad->email = User::where('name', 'Lubor Instrunio')->value('email');
@@ -2268,7 +2268,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->service = "Blinds";
         $ad->quote = 0;
         $ad->body = "Drakes Blinds 5 star business!";
-        $ad->user_id = User::where('name', 'Drake')->value('id');
+        $ad->user_id = User::where('name', 'Drake Ununel')->value('id');
         $ad->town = "Melbourne";
         $ad->postcode = 3000;
         $ad->phone = "0412324492";
@@ -2853,7 +2853,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->service = "Decking";
         $ad->quote = 0;
         $ad->body = "Decking to U!";
-        $ad->user_id = User::where('name', 'marion')->value('id');  
+        $ad->user_id = User::where('name', 'Omarion')->value('id');  
         $ad->town = "Melbourne";
         $ad->postcode = 3000;
         $ad->phone = "0415567124";
@@ -2872,7 +2872,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->town = "Melboure";
         $ad->postcode = 3000;
         $ad->phone = "0420050115";
-        $ad->email = User::where('name', 'Jake Pern')->value('email');
+        $ad->email = User::where('name', 'Jake Pernt')->value('email');
         $ad->max_dist = 30; 
         $ad->latitude = '-37.819604';
         $ad->longitude = '144.959720';
@@ -3400,7 +3400,7 @@ class AdvertisementTableSeeder extends Seeder
         $ad->latitude = '-37.815376';
         $ad->longitude = '144.959272';
         $ad->save();
-		Gates
+
 		// 223
         $ad = new Advertisement();
         $ad->name = "JJ's Gates";
