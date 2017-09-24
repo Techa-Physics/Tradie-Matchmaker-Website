@@ -2832,5 +2832,733 @@ class ReviewTableSeeder extends Seeder
         $review->description ="";
         $review->ad_id = 372;
         $review->save();
+
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 373;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 5;
+        $review->description ="";
+        $review->ad_id = 374;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 375;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 376;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 377;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 378;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 5;
+        $review->description ="";
+        $review->ad_id = 379;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 380;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 381;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 382;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 383;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 384;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 5;
+        $review->description ="";
+        $review->ad_id = 385;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 386;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 387;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 388;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 389;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 390;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 5;
+        $review->description ="";
+        $review->ad_id = 391;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 392;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 393;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 394;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 395;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 396;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 5;
+        $review->description ="";
+        $review->ad_id = 397;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 398;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 399;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 400;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 401;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 402;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 403;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 404;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 5;
+        $review->description ="";
+        $review->ad_id = 405;
+        $review->save();
+
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 406;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 407;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 408;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 409;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 5;
+        $review->description ="";
+        $review->ad_id = 410;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 5;
+        $review->description ="";
+        $review->ad_id = 411;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 412;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 413;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 5;
+        $review->description ="";
+        $review->ad_id = 414;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 415;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 416;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 417;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 5;
+        $review->description ="";
+        $review->ad_id = 418;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 419;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 420;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 421;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 5;
+        $review->description ="";
+        $review->ad_id = 422;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 423;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 424;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 5;
+        $review->description ="";
+        $review->ad_id = 425;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 426;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 5;
+        $review->description ="";
+        $review->ad_id = 427;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 428;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 429;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 5;
+        $review->description ="";
+        $review->ad_id = 430;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 431;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 432;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 433;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 434;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 1;
+        $review->description ="";
+        $review->ad_id = 435;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 436;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 437;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 5;
+        $review->description ="";
+        $review->ad_id = 438;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 439;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 440;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 441;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 1;
+        $review->description ="";
+        $review->ad_id = 442;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 443;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 444;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 5;
+        $review->description ="";
+        $review->ad_id = 445;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 446;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 447;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 1;
+        $review->description ="";
+        $review->ad_id = 448;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 449;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 450;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 451;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 5;
+        $review->description ="";
+        $review->ad_id = 452;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 453;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 454;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 455;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 1;
+        $review->description ="";
+        $review->ad_id = 456;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 457;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 458;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 459;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 5;
+        $review->description ="";
+        $review->ad_id = 460;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 461;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 462;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 463;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 1;
+        $review->description ="";
+        $review->ad_id = 464;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 465;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 466;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 467;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 5;
+        $review->description ="";
+        $review->ad_id = 468;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 4;
+        $review->description ="";
+        $review->ad_id = 469;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 470;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 471;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 472;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 373;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 474;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 2;
+        $review->description ="";
+        $review->ad_id = 375;
+        $review->save();
+        
+        $review = new Review();
+        $review->name = "Good";
+        $review->rating = 3;
+        $review->description ="";
+        $review->ad_id = 476;
+        $review->save();
     }
 }
