@@ -6670,7 +6670,7 @@ class AdvertisementTableSeeder extends Seeder
 		// 442
         $ad = new Advertisement();
         $ad->name = "Kerney's Ventilation";
-        $ad->service = "Ventilation";`
+        $ad->service = "Ventilation";
         $ad->quote = 0;
         $ad->body = "Kerney's Ventilation with a FREE quote!";
         $ad->user_id = User::where('name', 'Kerney Johns')->value('id'); 
@@ -6744,7 +6744,7 @@ class AdvertisementTableSeeder extends Seeder
 		// 447
         $ad = new Advertisement();
         $ad->name = "Kerney's Verandahs";
-        $ad->service = "Verandahs";`
+        $ad->service = "Verandahs";
         $ad->quote = 0;
         $ad->body = "Kerney's Verandahs with a FREE quote!";
         $ad->user_id = User::where('name', 'Kerney Johns')->value('id'); 
@@ -6818,7 +6818,7 @@ class AdvertisementTableSeeder extends Seeder
 		// 453
         $ad = new Advertisement();
         $ad->name = "Kerney's Wallpapering";
-        $ad->service = "Verandahs";`
+        $ad->service = "Verandahs";
         $ad->quote = 0;
         $ad->body = "Kerney's Wallpapering with a FREE quote!";
         $ad->user_id = User::where('name', 'Kerney Johns')->value('id'); 
@@ -6892,7 +6892,7 @@ class AdvertisementTableSeeder extends Seeder
 		// 458
         $ad = new Advertisement();
         $ad->name = "Kerney's Wardrobes";
-        $ad->service = "Wardrobes";`
+        $ad->service = "Wardrobes";
         $ad->quote = 0;
         $ad->body = "Kerney's Wardrobes with a FREE quote!";
         $ad->user_id = User::where('name', 'Kerney Johns')->value('id'); 
@@ -6951,7 +6951,7 @@ class AdvertisementTableSeeder extends Seeder
 		// 462
         $ad = new Advertisement();
         $ad->name = "Kerney's Window Cleaning";
-        $ad->service = "Window Cleaning";`
+        $ad->service = "Window Cleaning";
         $ad->quote = 0;
         $ad->body = "Kerney's Window Cleaning with a FREE quote!";
         $ad->user_id = User::where('name', 'Kerney Johns')->value('id'); 
@@ -6966,7 +6966,7 @@ class AdvertisementTableSeeder extends Seeder
 		// 463
         $ad = new Advertisement();
         $ad->name = "Kerney's Window Repair";
-        $ad->service = "Window Repair";`
+        $ad->service = "Window Repair";
         $ad->quote = 0;
         $ad->body = "Kerney's Window Repair with a FREE quote!";
         $ad->user_id = User::where('name', 'Kerney Johns')->value('id'); 
@@ -7025,7 +7025,7 @@ class AdvertisementTableSeeder extends Seeder
 		// 467
         $ad = new Advertisement();
         $ad->name = "Kerney's Window Repair";
-        $ad->service = "Window Repair";`
+        $ad->service = "Window Repair";
         $ad->quote = 0;
         $ad->body = "Kerney's Window Repair with a FREE quote!";
         $ad->user_id = User::where('name', 'Kerney Johns')->value('id'); 
@@ -7040,7 +7040,7 @@ class AdvertisementTableSeeder extends Seeder
 		// 468
         $ad = new Advertisement();
         $ad->name = "Kerney's Window Tinting";
-        $ad->service = "Window Tinting";`
+        $ad->service = "Window Tinting";
         $ad->quote = 0;
         $ad->body = "Kerney's Window Tinting with a FREE quote!";
         $ad->user_id = User::where('name', 'Kerney Johns')->value('id'); 
@@ -7099,7 +7099,7 @@ class AdvertisementTableSeeder extends Seeder
 		// 472
         $ad = new Advertisement();
         $ad->name = "Kerney's Window Tinting";
-        $ad->service = "Window Tinting";`
+        $ad->service = "Window Tinting";
         $ad->quote = 0;
         $ad->body = "Kerney's Window Tinting with a FREE quote!";
         $ad->user_id = User::where('name', 'Kerney Johns')->value('id'); 
@@ -7158,7 +7158,7 @@ class AdvertisementTableSeeder extends Seeder
 		// 476
         $ad = new Advertisement();
         $ad->name = "Kerney's Windows";
-        $ad->service = "Windows";`
+        $ad->service = "Windows";
         $ad->quote = 0;
         $ad->body = "Kerney's Windows with a FREE quote!";
         $ad->user_id = User::where('name', 'Kerney Johns')->value('id'); 
