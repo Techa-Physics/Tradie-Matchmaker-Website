@@ -813,21 +813,21 @@ class UserTableSeeder extends Seeder
         $user->password = bcrypt('123456');
         $user->save();
         $user->roles()->attach($role_business);
-/*
+
         $user = new User();
-        $user->name = '';
+        $user->name = 'Rolph Kang';
         $user->email = '89@email.com';
         $user->password = bcrypt('123456');
         $user->save();
         $user->roles()->attach($role_business);
 
         $user = new User();
-        $user->name = '';
+        $user->name = 'Ralph Wiggum';
         $user->email = '90@email.com';
         $user->password = bcrypt('123456');
         $user->save();
         $user->roles()->attach($role_business);
-
+/*
         $user = new User();
         $user->name = '';
         $user->email = '91@email.com';
