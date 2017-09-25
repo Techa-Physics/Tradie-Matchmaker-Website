@@ -16,6 +16,9 @@
         <a class = 'btn btn-success btn-lg' href = '/auth/register' role = 'button'>Register</a>
     </p> 
     @endif
+    <div class='pictureathome'>
+		<img src="{{ URL::to('pictures/toolman.png') }}" width="400" height="400">
+	</div>
 </div>
 
 @endsection
