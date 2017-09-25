@@ -49,10 +49,10 @@
     </br></br>
  
     <?php
-        echo Form::submit('Search', ['class'=>'btn btn-success']);
+        echo Form::submit('Search', ['class'=>'btn btn-primary btn-lg']);
     ?>
 
-    <a href="/profile" class="btn btn-danger">Cancel</a>
+    <a href="/profile" class="btn btn-primary btn-lg">Cancel</a>
 
 {!! Form::close() !!}
 

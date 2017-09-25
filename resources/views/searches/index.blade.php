@@ -54,6 +54,6 @@
 @else
     <p>Sorry! There is no advertisements for that service type near your location.</p>
 @endif
-<p>Change your search here    <a href='/searches/{{$search->id}}/edit' class='btn btn-warning'>Edit</a></p>
+<p>Change your search here    <a href='/searches/{{$search->id}}/edit' class='btn btn-primary btn-lg'>Edit</a></p>
 
 @endsection
