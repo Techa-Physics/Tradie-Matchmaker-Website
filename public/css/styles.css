@@ -25,43 +25,33 @@
   color: black;
 }
 
-.textathome{
-	position: relative;
-	float:left;
-	width: 50%;
-	text-align: left;
-	margin: 3%;
 
-}
 
 h1{
 	font-family: 'Cardo';
-	color: #E5E5E5;
+	color: #FFFFFF;
 }
 p{
 	font-family: 'Cardo';
 	font-size: 16px;
 }
 
-.bottombar{
-	position: absolute;
-	width: 5%;
-	background-color: aqua;
-} 
-
 .slideshow {
 	width: 900px;
-	min-width: 600px;
-	max-width: 1200px;
-	border: 2px black solid;
-	clear: both;
 	height: 20%;
-	float: right;
-	position: sticky;
-	left: -10%;
+	float: left;
 	margin-bottom: 5px;
 	overflow: hidden;
 	}
+
+.textathome{
+	position: relative;
+	float:left;
+	width: 40%;
+    height: 200px;
+	text-align: left;
+	margin: 3%;
+}
 .btn.btn-primary.btn-lg{
 	background-color: white;
     color: black;
@@ -86,11 +76,14 @@ p{
 	min-width: 100px;
 }
 .container.body-content{
-	background-color: #758AB6;
+	display: block;
+	background-color:#5D8AA8;
 	max-height: 100%;
 	max-width: 100%;
 	min-width: 800px;
 	min-height: 500px;
+	overflow: hidden;
+	margin: auto;
 }
 
 html{
@@ -99,22 +92,26 @@ html{
 }
 
 .row{
-	background-color: aqua;
-	width: 80%;
-	margin: 0px;
-	overflow: hidden; \
-	min-width: 100px;
-	clear: both;
+	margin-left: 290px;
+	margin-top: -178px;
+	clear:both;
 }
 
 
 .bigdetail{
-	border:2px black solid;
-	width: 20%;
-	float: left;
-	background-color: #939393;
+	margin-top: 20px;
+	border:2px aqua solid;
+	width: 200px;
+	background-color: 	#62a7c3;
 	overflow: hidden;
 	min-width: 27%;
+	border-radius: 10px;
+	padding: 5px;
 
+}
 
+.panel.panel-default{
+	background-color: 	#62a7c3;
+	width: 700px;
+	margin-left: -100px;
 }
