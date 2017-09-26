@@ -45,22 +45,23 @@ p{
 
 .bottombar{
 	position: absolute;
-	width: 100%;
-	left: 0%;
-	height: 60%;
-	top: 40%;
-	background-color: #F1F1F1;
-	border-color: #5E5E5E;
+	width: 5%;
+	background-color: aqua;
 } 
 
 .slideshow {
-	position: absolute;
-	top: 1%;
-	left: 25%;
-	width: 50%;
-
-
-}
+	width: 900px;
+	min-width: 600px;
+	max-width: 1200px;
+	border: 2px black solid;
+	clear: both;
+	height: 20%;
+	float: right;
+	position: sticky;
+	left: -10%;
+	margin-bottom: 5px;
+	overflow: hidden;
+	}
 .btn.btn-primary.btn-lg{
 	background-color: white;
     color: black;
@@ -82,41 +83,16 @@ p{
 }
 .navbar-brand{
 	font-family: 'Bungee Inline';font-size: 22px;
+	min-width: 100px;
 }
 .container.body-content{
 	background-color: #758AB6;
 	max-height: 100%;
 	max-width: 100%;
-	/*
-	position: absolute;
-	border-radius: 15px;
-	width: 60%;
-	left: 20%;
-	height: 60%;
-*/
+	min-width: 800px;
+	min-height: 500px;
 }
-.slideme{
-	display: none;
-	cursor: pointer;
-}
-/*
 
-.w3-left{
-	float: left;
-	cursor: pointer;
-	background-color: #555D50
-
-	} 
-.w3-right{
-	float: right;
-	cursor: pointer;
-	background-color: #555D50
-	} 
-.w3-badge {
-	cursor: pointer;
-	height: 13px;width:13px;padding: 0;
-}
-*/
 html{
 	max-height: 100%;
 	max-width: 100%;
@@ -125,8 +101,10 @@ html{
 .row{
 	background-color: aqua;
 	width: 80%;
-	float: right;
-	margin: 0px
+	margin: 0px;
+	overflow: hidden; \
+	min-width: 100px;
+	clear: both;
 }
 
 
@@ -135,5 +113,8 @@ html{
 	width: 20%;
 	float: left;
 	background-color: #939393;
+	overflow: hidden;
+	min-width: 27%;
+
 
 }
