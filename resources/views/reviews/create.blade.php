@@ -32,7 +32,7 @@
         echo Form::submit('Submit', ['class'=>'btn btn-success']);
     ?>
 
-    <a href="/home" class="btn btn-danger">Cancel</a>
+    <a href="/profile" class="btn btn-danger">Cancel</a>
 
 {!! Form::close() !!}
 @endsection
