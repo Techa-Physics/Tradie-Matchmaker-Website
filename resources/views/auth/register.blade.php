@@ -68,7 +68,7 @@
 
     <!-- Submit Button -->
     <div>
-        <button type="submit" class='btn btn-success'>Register</button>
+        <button type="submit" class='btn btn-primary btn-lg'>Register</button>
     </div>
 </form>
 

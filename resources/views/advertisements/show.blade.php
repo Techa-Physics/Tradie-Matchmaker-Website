@@ -34,13 +34,13 @@
     <div>
         @if(Auth::user())
             @if(Auth::user()->hasRole("Personal"))
-                <a href="/advertisements" class="btn btn-primary">Back</a>
+                <a href="/advertisements" class="btn btn-primary btn-lg">Back</a>
             @endif
         @endif
-        <a href="/profile" class="btn btn-success">Home</a>
+        <a href="/profile" class="btn btn-primary btn-lg">Home</a>
         @if(Auth::user())
             @if(Auth::user()->hasRole("Personal"))
-                <a href='/reviews/{{$ad->id}}/create' class='btn btn-warning'>Write Review</a>
+                <a href='/reviews/{{$ad->id}}/create' class='btn btn-primary btn-lg'>Write Review</a>
             @endif
             @if(Auth::user()->hasRole("Admin"))
                 {!!Form::open(['action' => ['AdvertisementsController@destroy', $ad->id], 'method' => 'POST', 'style' => 'display:inline-block'])!!}

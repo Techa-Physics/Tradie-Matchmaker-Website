@@ -4,10 +4,16 @@
     $page_title="Profile";
     $user = Auth::user();
 ?>
+<div class="bigdetail">
+    <div class="hello">
+      <h1>Hello, {{ $user->name }}</h1>
+    </div>
 
-<h1>Hello, {{ $user->name }}</h1>
-<p>Email: {{ $user->email }}</p>
-<p>Joined: {{ $user->created_at }}</p>
+    <div class="more detail">
+        <p>Email: {{ $user->email }}</p>
+        <p>Joined: {{ $user->created_at }}</p>
+    </div>
+</div>
 
 <div class="container">
     <div class="row">
@@ -67,11 +73,11 @@
                                     @endif
                                     <td>
                                         {!!Form::open(['action' => ['SearchesController@destroy', $search->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
-                                        <a href='/searches/{{ $search->id }}' class='btn btn-success'>Search</a>
-                                        <a href='/searches/{{$search->id}}/edit' class='btn btn-warning'>Edit</a>
+                                        <a href='/searches/{{ $search->id }}' class='btn btn-primary btn-lg'>Search</a>
+                                        <a href='/searches/{{$search->id}}/edit' class='btn btn-primary btn-lg'>Edit</a>
                                         <?php
                                             echo Form::hidden('_method', 'DELETE');
-                                            echo Form::submit('Delete', ['class' => 'btn btn-danger']);
+                                            echo Form::submit('Delete', ['class' => 'btn btn-primary btn-lg']);
                                         ?>
                                         {!!Form::close()!!}
                                     </td>                                
