@@ -3,10 +3,11 @@
     <head>
         @include('includes.head')
     </head>
-    <body>
+    <body class="bodybackgroundcolor">
         @include('includes.nav')
         
         <div class="container body-content">
+
             @include('includes.message')
             @yield('body')
             

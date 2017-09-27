@@ -29,7 +29,7 @@
 
 h1{
 	font-family: 'Cardo';
-	color: #FFFFFF;
+	color: black;
 }
 p{
 	font-family: 'Cardo';
@@ -76,8 +76,8 @@ p{
 	min-width: 100px;
 }
 .container.body-content{
+	background-color:#e4e4e4;
 	display: block;
-	background-color:#5D8AA8;
 	max-height: 100%;
 	max-width: 100%;
 	min-width: 800px;
@@ -114,4 +114,10 @@ html{
 	background-color: 	#62a7c3;
 	width: 700px;
 	margin-left: -100px;
+}
+
+.navbar.navbar-inverse.fixed-top{ background-color: #034f84; }
+
+.bodybackgroundcolor{
+	background-color: #92a8d1;
 }
