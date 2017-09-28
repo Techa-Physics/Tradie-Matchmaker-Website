@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->Call(CategoriesTableSeeder::class);
         $this->Call(AdvertisementTableSeeder::class);
         $this->Call(ReviewTableSeeder::class);
+        $this->Call(PaletteTableSeeder::class);
         Model::reguard();
     }
 }

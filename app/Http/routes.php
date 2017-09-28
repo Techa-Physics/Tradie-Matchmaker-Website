@@ -16,6 +16,8 @@ Route::get('about', 'HomeController@about');
 
 Route::get('profile', 'ProfileController@index');
 
+Route::resource('palette', 'PaletteController');
+
 // Advertisement routes
 Route::resource('reviews','ReviewsController');
 
@@ -52,6 +54,7 @@ Route::group(['middleware'], function() {
         'uses' => 'SearchesController@index',
         'as' => 'searches.index'
     ]);
+
 });
 
 // Code below used from 

@@ -25,12 +25,11 @@
   color: black;
 }
 
-
-
 h1{
 	font-family: 'Cardo';
 	color: black;
 }
+
 p{
 	font-family: 'Cardo';
 	font-size: 16px;
@@ -80,7 +79,7 @@ html{
 	max-width: 100%;
 }
 
-.row{
+.row-custom{
 	margin-left: 290px;
 	margin-top: -178px;
 	clear:both;
@@ -105,7 +104,9 @@ html{
 	margin-left: -100px;
 }
 
-.navbar.navbar-inverse.fixed-top{ background-color: #034f84; }
+.navbar.navbar-inverse.fixed-top{
+	background-color: #034f84;
+}
 
 .bodybackgroundcolor{
 	background-color: #92a8d1;
@@ -120,4 +121,32 @@ html{
 	float: right;
 	width: 50%;
 	padding: 40px;
+}
+
+.palette-1-dark{
+	background-color: #034f84 !important;
+}
+.palette-1-medium{
+	background-color: #92a8d1 !important;
+}
+.palette-1-light{
+	background-color: #e4e4e4 !important;
+}
+.palette-2-dark{
+	background-color: #802000 !important;
+}
+.palette-2-medium{
+	background-color: #d2a393 !important;
+}
+.palette-2-light{
+	background-color: #f0e4e4 !important;
+}
+.palette-3-dark{
+	background-color: #489100 !important;
+}
+.palette-3-medium{
+	background-color: #a2d293 !important;
+}
+.palette-3-light{
+	background-color: #e4f0e4 !important;
 }
