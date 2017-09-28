@@ -10,11 +10,11 @@
 
             @include('includes.message')
             @yield('body')
-            
+        </div>
             <footer>
                 @include('includes.footer')
             </footer>
-        </div>
+       
         
         @include('includes.scripts')
     </body>

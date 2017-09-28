@@ -37,21 +37,10 @@ p{
 }
 
 .slideshow {
-	width: 900px;
-	height: 20%;
-	float: left;
-	margin-bottom: 5px;
-	overflow: hidden;
+	float: right;
+	width: 50%;
 	}
 
-.textathome{
-	position: relative;
-	float:left;
-	width: 40%;
-    height: 200px;
-	text-align: left;
-	margin: 3%;
-}
 .btn.btn-primary.btn-lg{
 	background-color: white;
     color: black;
@@ -120,4 +109,15 @@ html{
 
 .bodybackgroundcolor{
 	background-color: #92a8d1;
+}
+
+.loginform{
+	float: left;
+	clear: both;
+	width: 50%;
+}
+.fb-btn {
+	float: right;
+	width: 50%;
+	padding: 40px;
 }
