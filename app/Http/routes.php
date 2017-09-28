@@ -16,7 +16,7 @@ Route::get('about', 'HomeController@about');
 
 Route::get('profile', 'ProfileController@index');
 
-Route::get('palette', 'PaletteController@index');
+Route::resource('palette', 'PaletteController');
 
 // Advertisement routes
 Route::resource('reviews','ReviewsController');

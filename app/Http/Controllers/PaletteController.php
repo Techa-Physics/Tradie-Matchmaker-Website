@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Palette;
 
-use Auth;
+use Auth, DB;
 
 class PaletteController extends Controller
 {
@@ -25,5 +26,14 @@ class PaletteController extends Controller
         }
     }
     
-    
+    public function show($id)
+    {
+        $palette = Palette::find(1);
+        
+        // Replace current palette preference
+        $palette->currentPalette = $id;
+        $palette->save();
+
+        return view('palette.index');
+    }
 }

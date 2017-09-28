@@ -133,3 +133,23 @@ html{
 .palette-1-light{
 	background-color: #e4e4e4 !important;
 }
+
+.palette-2-dark{
+	background-color: #802000 !important;
+}
+.palette-2-medium{
+	background-color: #d2a393 !important;
+}
+.palette-2-light{
+	background-color: #f0e4e4 !important;
+}
+
+.palette-3-dark{
+	background-color: #489100 !important;
+}
+.palette-3-medium{
+	background-color: #a2d293 !important;
+}
+.palette-3-light{
+	background-color: #e4f0e4 !important;
+}
