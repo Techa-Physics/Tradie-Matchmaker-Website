@@ -16,7 +16,7 @@
 </div>
 
 <div class="container">
-    <div class="row">
+    <div class="row-custom">
         <div class="col-md-8 col-md-offset-2"> 
             <div class="panel panel-default">
                 
@@ -86,8 +86,10 @@
                         </table>
                         @endif
                     @elseif(Auth::user()->hasRole("Admin"))
-                        <div class="panel-heading"><h3>Admin</h3> </div>
-                        <div class="panel-body">
+                        <div class="panel-heading"> <h3>Administration Panel</h3> </div>
+                        <div class="panel-body"> 
+                            <h2><a href="{{ url('/palette') }}" class="btn btn-default">Change website palette</a></h2>
+                        </div>
                     @else 
                         <div class="panel-heading"><h3>Unknown user role, contact webmaster.</h3> </div>
                     @endif     

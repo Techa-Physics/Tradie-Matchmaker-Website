@@ -91,7 +91,7 @@ html{
 	max-width: 100%;
 }
 
-.row{
+.row-custom{
 	margin-left: 290px;
 	margin-top: -178px;
 	clear:both;
@@ -116,8 +116,20 @@ html{
 	margin-left: -100px;
 }
 
-.navbar.navbar-inverse.fixed-top{ background-color: #034f84; }
+.navbar.navbar-inverse.fixed-top{
+	background-color: #034f84;
+}
 
 .bodybackgroundcolor{
 	background-color: #92a8d1;
+}
+
+.palette-1-dark{
+	background-color: #034f84 !important;
+}
+.palette-1-medium{
+	background-color: #92a8d1 !important;
+}
+.palette-1-light{
+	background-color: #e4e4e4 !important;
 }
