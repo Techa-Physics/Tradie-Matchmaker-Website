@@ -37,11 +37,11 @@
                                     <td>{{ $ad->service }}</td>
                                     <td>
                                         {!!Form::open(['action' => ['AdvertisementsController@destroy', $ad->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
-                                        <a href='/advertisements/{{$ad->id}}' class='btn btn-success'>View</a>
-                                        <a href='/advertisements/{{$ad->id}}/edit' class='btn btn-warning'>Edit</a>
+                                        <a href='/advertisements/{{$ad->id}}' class='btn btn-primary btn-lg'>View</a>
+                                        <a href='/advertisements/{{$ad->id}}/edit' class='btn btn-primary btn-lg'>Edit</a>
                                         <?php
                                             echo Form::hidden('_method', 'DELETE');
-                                            echo Form::submit('Delete', ['class' => 'btn btn-danger']);
+                                            echo Form::submit('Delete', ['class' => 'btn btn-primary btn-lg']);
                                         ?>
                                         {!!Form::close()!!}
                                         
