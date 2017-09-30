@@ -27,7 +27,7 @@ class SearchesController extends Controller
         $this->searchRules = array(
             'service' => 'required',
             'town' => 'required',
-            'postcode' => 'required'//,
+            'postcode' => 'required|digits:4'//,
             // 'quote_min' => 'required_without_all:service,location,quote_max,rating',
             // 'quote_max' => 'required_without_all:service,location,quote_max,rating',
             // 'rating' => 'required_without_all:service,location,quote_min,quote_max,rating',
