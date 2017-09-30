@@ -58,11 +58,11 @@
 
     ?>
     </br>
-    <a href="/profile" class="btn btn-danger">Cancel</a>
+    <a href="/profile" class="btn btn-primary btn-lg">Cancel</a>
 
     <?php
         echo Form::hidden('_method','PUT');
-        echo Form::submit('Update', ['class'=>'btn btn-primary']);
+        echo Form::submit('Update', ['class'=>'btn btn-primary btn-lg']);
     ?>
 {!! Form::close() !!}
 

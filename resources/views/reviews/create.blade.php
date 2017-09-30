@@ -29,10 +29,10 @@
     
     <?php
         echo Form::hidden('ad_id', $ad->id, ['class' => 'form-control']);
-        echo Form::submit('Submit', ['class'=>'btn btn-success']);
+        echo Form::submit('Submit', ['class'=>'btn btn-primary btn-lg']);
     ?>
-
-    <a href="/home" class="btn btn-danger">Cancel</a>
+    
+    <a href="/profile" class="btn btn-danger">Cancel</a>
 
 {!! Form::close() !!}
 @endsection

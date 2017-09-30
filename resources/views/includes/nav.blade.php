@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse fixed-top">
+<nav class="navbar navbar-inverse fixed-top {{ $paletteDark }}">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -10,7 +10,21 @@
             <a class="navbar-brand" href="{{ url('/') }}">Where's My Tradie</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
+
+            <!-- Right side of navagation bar -->
+			<ul class="nav navbar-nav navbar-right">
+                @if(Auth::guest())
+                    <li><a href="{{ url('/auth/login') }}"><span class="glyphicon glyphicon-log-out"></span> Login</a></li>
+                    <li><a href="{{ url('/auth/register') }}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                @else
+                    <li><a href="{{ url('/profile') }}"><span class="glyphicon glyphicon-user"></span> {{Auth::user()->name}}</a></li>
+                    <li><a href="{{ url('/auth/logout') }}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                @endif
+
+			</ul>
+		</div>
+        <div id="main-navigation">
+            <ul>
 
                 <li><a href="{{ url('/about') }}">About</a></li>
                 
@@ -27,19 +41,7 @@
                 @endif
                 
             </ul>
+        </div>
         
-
-            <!-- Right side of navagation bar -->
-			<ul class="nav navbar-nav navbar-right">
-                @if(Auth::guest())
-                    <li><a href="{{ url('/auth/login') }}"><span class="glyphicon glyphicon-log-out"></span> Login</a></li>
-                    <li><a href="{{ url('/auth/register') }}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
-                @else
-                    <li><a href="{{ url('/profile') }}"><span class="glyphicon glyphicon-user"></span> {{Auth::user()->name}}</a></li>
-                    <li><a href="{{ url('/auth/logout') }}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-                @endif
-
-			</ul>
-		</div>
     </div>
 </nav>

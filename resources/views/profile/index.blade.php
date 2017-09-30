@@ -4,13 +4,19 @@
     $page_title="Profile";
     $user = Auth::user();
 ?>
+<div class="bigdetail">
+    <div class="hello">
+      <h1>Hello, {{ $user->name }}</h1>
+    </div>
 
-<h1>Hello, {{ $user->name }}</h1>
-<p>Email: {{ $user->email }}</p>
-<p>Joined: {{ $user->created_at }}</p>
+    <div class="more detail">
+        <p>Email: {{ $user->email }}</p>
+        <p>Joined: {{ $user->created_at }}</p>
+    </div>
+</div>
 
 <div class="container">
-    <div class="row">
+    <div class="row-custom">
         <div class="col-md-8 col-md-offset-2"> 
             <div class="panel panel-default">
                 
@@ -31,11 +37,11 @@
                                     <td>{{ $ad->service }}</td>
                                     <td>
                                         {!!Form::open(['action' => ['AdvertisementsController@destroy', $ad->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
-                                        <a href='/advertisements/{{$ad->id}}' class='btn btn-success'>View</a>
-                                        <a href='/advertisements/{{$ad->id}}/edit' class='btn btn-warning'>Edit</a>
+                                        <a href='/advertisements/{{$ad->id}}' class='btn btn-primary btn-lg'>View</a>
+                                        <a href='/advertisements/{{$ad->id}}/edit' class='btn btn-primary btn-lg'>Edit</a>
                                         <?php
                                             echo Form::hidden('_method', 'DELETE');
-                                            echo Form::submit('Delete', ['class' => 'btn btn-danger']);
+                                            echo Form::submit('Delete', ['class' => 'btn btn-primary btn-lg']);
                                         ?>
                                         {!!Form::close()!!}
                                         
@@ -67,11 +73,11 @@
                                     @endif
                                     <td>
                                         {!!Form::open(['action' => ['SearchesController@destroy', $search->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
-                                        <a href='/searches/{{ $search->id }}' class='btn btn-success'>Search</a>
-                                        <a href='/searches/{{$search->id}}/edit' class='btn btn-warning'>Edit</a>
+                                        <a href='/searches/{{ $search->id }}' class='btn btn-primary btn-lg'>Search</a>
+                                        <a href='/searches/{{$search->id}}/edit' class='btn btn-primary btn-lg'>Edit</a>
                                         <?php
                                             echo Form::hidden('_method', 'DELETE');
-                                            echo Form::submit('Delete', ['class' => 'btn btn-danger']);
+                                            echo Form::submit('Delete', ['class' => 'btn btn-primary btn-lg']);
                                         ?>
                                         {!!Form::close()!!}
                                     </td>                                
@@ -80,8 +86,10 @@
                         </table>
                         @endif
                     @elseif(Auth::user()->hasRole("Admin"))
-                        <div class="panel-heading"><h3>Admin</h3> </div>
-                        <div class="panel-body">
+                        <div class="panel-heading"> <h3>Administration Panel</h3> </div>
+                        <div class="panel-body"> 
+                            <h2><a href="{{ url('/palette') }}" class="btn btn-default">Change website palette</a></h2>
+                        </div>
                     @else 
                         <div class="panel-heading"><h3>Unknown user role, contact webmaster.</h3> </div>
                     @endif     
