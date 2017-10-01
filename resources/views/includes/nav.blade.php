@@ -29,10 +29,13 @@
                 <li><a href="{{ url('/about') }}">About</a></li>
                 
 
-                <!-- @if(Auth::guest() || Auth::user()->hasRole("Personal") || Auth::user()->hasRole('Admin')) -->
-                    <li><a href="{{ url('/advertisements') }}">Advertisements</a></li> 
+                @if(Auth::guest() || Auth::user()->hasRole("Personal") || Auth::user()->hasRole('Admin'))
+                    <li><a href="{{ url('/advertisements') }}">Advertisements</a></li>                     
+                @endif
+
+                @if(Auth::guest() || Auth::user()->hasRole("Personal"))
                     <li><a href="{{ url('/searches/create') }}">Find My Tradie</a></li>                     
-                <!-- @endif -->
+                @endif
                
                 @if(Auth::user())
                     @if(Auth::user()->hasRole("Business"))

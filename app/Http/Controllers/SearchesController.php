@@ -106,8 +106,14 @@ class SearchesController extends Controller
         $address = "$town $postcode, Australia"; 
         $prepAddr = str_replace(' ','+',$address);
         $geocode=file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
+        return '$geocode';
+        if($geocode == FALSE)
+        {
+            return redirect("/searches/create")->with('error', 'Invlaid address entered');
+        }
+        $output= json_decode($geocode); 
+
         
-        $output= json_decode($geocode);
         
         $lat = $output->results[0]->geometry->location->lat;
         $long = $output->results[0]->geometry->location->lng;
@@ -173,7 +179,7 @@ class SearchesController extends Controller
         $address = "$town $postcode, Australia"; 
         $prepAddr = str_replace(' ','+',$address);
         $geocode=file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
-        
+
         $output= json_decode($geocode);
         
         $lat = $output->results[0]->geometry->location->lat;

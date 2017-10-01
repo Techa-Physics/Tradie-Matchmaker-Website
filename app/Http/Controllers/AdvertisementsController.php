@@ -57,7 +57,7 @@ class AdvertisementsController extends Controller
             'quote' => 'required',
             'body' => 'required',
             'town' => 'required',
-            'postcode' => 'required',
+            'postcode' => 'required|digits:4',
             'phone' => 'required',
             'max_dist' => 'required',
         ]);
@@ -152,7 +152,7 @@ class AdvertisementsController extends Controller
             'quote' => 'required',
             'body' => 'required',
             'town' => 'required',
-            'postcode' => 'required',
+            'postcode' => 'required|digits:4',
             'phone' => 'required',
             'max_dist' => 'required',
         ]);
