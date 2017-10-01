@@ -27,10 +27,10 @@ class SearchesController extends Controller
         $this->searchRules = array(
             'service' => 'required',
             'town' => 'required',
-            'postcode' => 'required|digits:4'//,
-            // 'quote_min' => 'required_without_all:service,location,quote_max,rating',
-            // 'quote_max' => 'required_without_all:service,location,quote_max,rating',
-            // 'rating' => 'required_without_all:service,location,quote_min,quote_max,rating',
+            'postcode' => 'required|digits:4'/*,
+            'quote_min' => 'numeric',
+            'quote_max' => 'numeric',
+            'rating' => 'required_without_all:service,location,quote_min,quote_max,rating',*/
         );
     }
     /**
@@ -106,9 +106,9 @@ class SearchesController extends Controller
         $address = "$town $postcode, Australia"; 
         $prepAddr = str_replace(' ','+',$address);
         $geocode=file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
-        
-        $output= json_decode($geocode);
-        
+
+        $output= json_decode($geocode); 
+
         $lat = $output->results[0]->geometry->location->lat;
         $long = $output->results[0]->geometry->location->lng;
 
@@ -173,7 +173,7 @@ class SearchesController extends Controller
         $address = "$town $postcode, Australia"; 
         $prepAddr = str_replace(' ','+',$address);
         $geocode=file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
-        
+
         $output= json_decode($geocode);
         
         $lat = $output->results[0]->geometry->location->lat;
