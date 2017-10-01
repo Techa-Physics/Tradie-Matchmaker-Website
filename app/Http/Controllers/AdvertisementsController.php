@@ -54,12 +54,12 @@ class AdvertisementsController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'service' => 'required',
-            'quote' => 'required',
+            'quote' => 'required|numeric',
             'body' => 'required',
             'town' => 'required',
             'postcode' => 'required|digits:4',
-            'phone' => 'required',
-            'max_dist' => 'required',
+            'phone' => 'required|digits_between:8,10',
+            'max_dist' => 'required|numeric',
         ]);
         
         $town = $request->input('town');
@@ -149,12 +149,12 @@ class AdvertisementsController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'service' => 'required',
-            'quote' => 'required',
+            'quote' => 'required|numeric',
             'body' => 'required',
             'town' => 'required',
             'postcode' => 'required|digits:4',
-            'phone' => 'required',
-            'max_dist' => 'required',
+            'phone' => 'required|digits_between:8,10',
+            'max_dist' => 'required|numeric',
         ]);
 
         $town = $request->input('town');

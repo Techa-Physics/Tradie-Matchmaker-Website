@@ -83,6 +83,8 @@
                                     </td>                                
                                 </tr>
                             @endforeach
+                        @else
+                        <p>You currently have no searches. Go to <a href="{{ url('/searches/create') }}" style="color: black">Find My Tradie</a> to make a new search</p>
                         </table>
                         @endif
                     @elseif(Auth::user()->hasRole("Admin"))
