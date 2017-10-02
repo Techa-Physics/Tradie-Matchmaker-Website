@@ -41,4 +41,9 @@
     </form>
 </div>
 
+   <div class="slideshow" >
+            <img class="slideme" src="{{ URL::to('pictures/toolman.png') }}" alt="http://www.jimsbuildingmaintenance.com.au/images/stories/finding-the-right-tradie.jpg" >
+        
+    </div>
+
 @endsection

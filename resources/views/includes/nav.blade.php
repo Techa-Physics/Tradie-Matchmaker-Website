@@ -26,11 +26,12 @@
         <div id="main-navigation">
             <ul>
 
-                <li><a href="{{ url('/about') }}">About</a></li>
+                <li><a href="{{ url('/') }}">Home</a></li>|
+                <li><a href="{{ url('/about') }}">About</a></li>|
                 
 
                 @if(Auth::guest() || Auth::user()->hasRole("Personal") || Auth::user()->hasRole('Admin'))
-                    <li><a href="{{ url('/advertisements') }}">Advertisements</a></li>                     
+                    <li><a href="{{ url('/advertisements') }}">Advertisements</a></li>|                     
                 @endif
 
                 @if(Auth::guest() || Auth::user()->hasRole("Personal"))

@@ -23,11 +23,8 @@
 
       
         <div class="slideshow" >
-            <img class="slideme" src="{{ URL::to('pictures/toolman.png') }}" alt="http://www.jimsbuildingmaintenance.com.au/images/stories/finding-the-right-tradie.jpg" >
-            <!--
-            <img class="slideme" src="{{ URL::to('pictures/plumber.png') }}" width"2000" height="513" alt="https://adelaide.homegiraffe.com.au/wp-content/uploads/2015/01/Forestville-5035.jpg?quality=100.3016070710090" style="width:100%">
-            <img class="slideme" src="{{ URL::to('pictures/carpenter.png') }}" width"2000" height="513" alt="http://www.sewctc.org/uploads/7/6/1/2/7612415/carpenter1-jpeg_orig.jpg" style="width:100%">
-          -->
+            <img class="slideme" src="{{ URL::to('pictures/homepage.png') }}" alt="http://www.jimsbuildingmaintenance.com.au/images/stories/finding-the-right-tradie.jpg" >
+        
     </div>
 
    	 		

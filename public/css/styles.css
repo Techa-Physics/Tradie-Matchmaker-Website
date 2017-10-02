@@ -21,50 +21,52 @@
 }
 
 #main-navigation > ul > li > a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #000C17;
+  color: #FFD384;
 }
 
 h1{
 	font-family: 'Cardo';
 	color: black;
+	text-decoration: overline underline;
+	display: inline-block;
 }
 
 p{
 	font-family: 'Cardo';
 	font-size: 16px;
+	color: black;
 }
 
-.slideshow {
-	float: right;
-	width: 50%;
-	}
+
 
 .btn.btn-primary.btn-lg{
-	background-color: white;
-    color: black;
-    border: 2px solid #555555;
+	background-color: #555555;
+    color: white;
+    border: 2px solid aqua;
 }
 .btn.btn-primary.btn-lg:hover{
 	background-color: #555555;
-    color: white;
+    color: aqua;
+    border:2px solid white;
 }
 .btn.btn-success.btn-lg{
-	background-color: white;
-    color: black;
-    border: 2px solid #555555;
+	background-color: #555555;
+    color: white;
+    border: 2px solid aqua;
 }
 
 .btn.btn-success.btn-lg:hover{
 	background-color: #555555;
-    color: white;
+    color: aqua;
+    border:2px solid white;
 }
 .navbar-brand{
 	font-family: 'Bungee Inline';font-size: 22px;
 	min-width: 100px;
 }
 .container.body-content{
-	background-color:#e4e4e4;
+	background-color:#F2F2F2;
 	display: block;
 	max-height: 100%;
 	max-width: 100%;
@@ -109,7 +111,7 @@ html{
 }
 
 .bodybackgroundcolor{
-	background-color: #92a8d1;
+	background-color: #060403!important;
 }
 
 .loginform{
@@ -122,6 +124,12 @@ html{
 	width: 50%;
 	padding: 40px;
 }
+.slideshow {
+	float: right;
+	width: 50%;
+	margin-top: 50px;
+	margin-bottom: -40px; 
+	}
 
 .palette-1-dark{
 	background-color: #034f84 !important;
@@ -149,4 +157,15 @@ html{
 }
 .palette-3-light{
 	background-color: #e4f0e4 !important;
+}
+
+.footer{
+	background-color: #2F2F2F;
+	position: sticky;
+	bottom: 0;
+	width:100%;
+}
+
+.footer center{
+	color: #FFFFFF;
 }
