@@ -48,8 +48,11 @@ class AuthController extends Controller
         return Validator::make($data, [
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|confirmed|min:6|max:18',
+            'password' => 'required|confirmed|min:6|max:18|regex:/^(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])\S*$/',
             'role' => 'required'
+        ],
+        [
+            'password.regex' => 'Your password must have a length of 6 to 18 characters, have atleast 1 lower and uppercase letter, 1 number, and 1 symbol'
         ]);
     }
  
